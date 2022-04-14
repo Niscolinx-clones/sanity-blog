@@ -15,18 +15,13 @@ const Home: NextPage = () => {
 
       <div className="flex items-center justify-between border-y border-black bg-[#febf17] py-10 lg:py-0">
         <div className="space-y-5 px-10">
-          <h1 className="max-w-xl font-serif text-6xl">
-           
-            is a place to write, read, and connect
-          </h1>
+          <h1 className="max-w-xl font-serif text-6xl">Stay curious.</h1>
           <h2>
-            It's easy and free to post your thinking on any topic and connect
-            with millions of readers
+            Discover stories, thinking, and expertise from writers on any topic.
           </h2>
         </div>
-        {/* <img src="https://accountabilitylab.org/wp-content/uploads/2020/03/Medium-logo.png" alt="" className='hidden md:inline-flex h-32 lg:h-full' /> */}
+     
         <img src="/heroSvg.svg" alt="" />
-        
       </div>
     </div>
   )
