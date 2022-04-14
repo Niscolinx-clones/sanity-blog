@@ -24,7 +24,7 @@ function Header() {
             </h3>
           </div>
         </div>
-        <div className="flex items-center justify-between border-y border-black bg-[#febf17] py-10 lg:py-0">
+        <div className="flex items-center justify-between border-y border-black bg-[#febf17] py-10 lg:py-0 col-span-full">
           <div className="space-y-5">
             <h2
               className="font-serif lg:tracking-tighter"
