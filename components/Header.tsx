@@ -4,7 +4,7 @@ import React from 'react'
 function Header() {
   return (
     <header className="w-full bg-[#febf17] ">
-        <div className="flex items-center justify-between py-5 ml-24">
+        <div className="flex items-center justify-between py-5">
           <div>
             <Link href="/">
               <img
@@ -25,7 +25,7 @@ function Header() {
           </div>
         </div>
         <div className="flex items-center justify-between border-y border-black bg-[#febf17] py-10 lg:py-0">
-          <div className="space-y-5 ml-24">
+          <div className="space-y-5">
             <h2
               className="font-serif lg:tracking-tighter"
               style={{ fontSize: '106px', lineHeight: '95px' }}
