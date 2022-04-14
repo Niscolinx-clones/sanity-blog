@@ -19,6 +19,9 @@ const Home: NextPage = () => {
           <h2>
             Discover stories, thinking, and expertise from writers on any topic.
           </h2>
+          <button className='bg-black text-white text-3xl py-3 px-4'>
+            Start reading
+          </button>
         </div>
      
         <img src="/heroSvg.svg" alt="" />
