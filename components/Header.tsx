@@ -3,8 +3,8 @@ import React from 'react'
 
 function Header() {
   return (
-    <header className="w-full bg-[#febf17] ">
-        <div className="flex items-center justify-between py-5">
+    <header className="w-full bg-[#febf17] grid grid-cols-8 ">
+        <div className="flex items-center justify-between py-5 col-span-full">
           <div>
             <Link href="/">
               <img
