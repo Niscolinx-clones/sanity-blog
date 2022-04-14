@@ -3,8 +3,7 @@ import React from 'react'
 
 function Header() {
   return (
-    <header className="bg-[#febf17]">
-      <div className="flex justify-between max-w-6xl mx-auto py-5">
+    <header className="w-full bg-[#febf17] ">
         <div className="flex items-center space-x-5">
           <div>
             <Link href="/">
@@ -15,16 +14,32 @@ function Header() {
               />
             </Link>
           </div>
-        </div>
         <div className="flex items-center space-x-5 text-sm font-light text-black">
           <h3>Our story</h3>
           <h3>Membership</h3>
           <h3>Write</h3>
           <h3>Sign In</h3>
-          <h3 className="rounded-full text-white bg-black px-4 py-3">
+          <h3 className="rounded-full bg-black px-4 py-3 text-white">
             Get Started
           </h3>
         </div>
+      </div>
+      <div className="flex items-center justify-between border-y border-black bg-[#febf17] py-10 lg:py-0">
+        <div className="space-y-5 px-10 ">
+          <h2
+            className="font-serif lg:tracking-tighter"
+            style={{ fontSize: '106px', lineHeight: '95px' }}
+          >
+            Stay curious.
+          </h2>
+          <h3 className="text-2xl text-[#292929] md:w-[500px] lg:w-[550px]">
+            Discover stories, thinking, and expertise from writers on any topic.
+          </h3>
+          <button className="bg-black py-3 px-4 text-3xl text-white">
+            Start reading
+          </button>
+        </div>
+        <img src="/heroSvg.svg" alt="" />
       </div>
     </header>
   ) 

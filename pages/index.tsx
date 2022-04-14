@@ -13,19 +13,8 @@ const Home: NextPage = () => {
       </Head>
       <Header />
 
-      <div className="flex items-center justify-between border-y border-black bg-[#febf17] py-10 lg:py-0">
-        <div className="space-y-5 px-10">
-          <h1 className="max-w-xl font-serif text-6xl">Stay curious.</h1>
-          <h2>
-            Discover stories, thinking, and expertise from writers on any topic.
-          </h2>
-          <button className='bg-black text-white text-3xl py-3 px-4'>
-            Start reading
-          </button>
-        </div>
      
-        <img src="/heroSvg.svg" alt="" />
-      </div>
+
     </div>
   )
 }
