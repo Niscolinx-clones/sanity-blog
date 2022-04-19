@@ -7,11 +7,11 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         // Simple 16 column grid
-        16: 'repeat(16, minmax(0, 1fr))',
+        18: 'repeat(18, minmax(0, 1fr))',
       },
 
       gridColumnEnd: {
-        16: '16',
+        18: '18',
       },
     },
   },

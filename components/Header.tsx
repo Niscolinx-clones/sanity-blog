@@ -3,15 +3,15 @@ import React from 'react'
 
 function Header() {
   return (
-    <header className="grid w-full grid-cols-16 bg-[#febf17] ">
-      <div className="col-start-2 col-end-16 grid">
+    <header className="grid w-full grid-cols-18 bg-[#febf17] ">
+      <div className="col-start-2 col-end-18 grid">
         <div className="flex items-center justify-between py-5 ">
           <div>
             <Link href="/">
               <img
                 src="https://links.papareact.com/yvf"
                 alt=""
-                className="w-44 cursor-pointer object-contain"
+                className="w-44 cursor-pointer object-contain -ml-2"
               />
             </Link>
           </div>
@@ -26,9 +26,9 @@ function Header() {
           </div>
         </div>
       </div>
-      <hr />
-      <div className="col-start-2 col-end-16 grid">
-        <div className="col-span-full flex items-center justify-between border-y border-black bg-[#febf17] py-10 lg:py-0">
+      <hr className="col-span-full border-black" />
+      <div className="grid col-[2/-1]">
+        <div className="col-span-full flex items-center justify-between  bg-[#febf17] py-10 lg:py-0">
           <div className="space-y-5">
             <h2
               className="font-serif lg:tracking-tighter"
