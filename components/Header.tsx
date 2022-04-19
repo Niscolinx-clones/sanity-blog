@@ -41,9 +41,9 @@ function Header() {
               Start reading
             </button>
           </div>
-          <div className="absolute w-[585px] left-[420px] lg:right-0 lg:left-auto md:hidden">
+          <div className="hidden absolute w-[585px] left-[420px] lg:right-0 lg:left-auto md:block">
 
-          <img src="/heroSvg.svg" alt="" />
+          <img src="/heroSvg.svg" alt="" className='ml-16'/>
           </div>
         </div>
       </div>
