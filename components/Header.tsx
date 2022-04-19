@@ -3,8 +3,9 @@ import React from 'react'
 
 function Header() {
   return (
-    <header className="w-full bg-[#febf17] grid grid-cols-16 ">
-        <div className="flex items-center justify-between py-5 col-span-full">
+    <header className="grid w-full grid-cols-16 bg-[#febf17] ">
+      <div className="col-start-2 col-end-16 grid">
+        <div className="flex items-center justify-between py-5 ">
           <div>
             <Link href="/">
               <img
@@ -14,7 +15,7 @@ function Header() {
               />
             </Link>
           </div>
-          <div className="flex items-center  text-sm font-light text-black space-x-5">
+          <div className="flex items-center  space-x-5 text-sm font-light text-black">
             <h3>Our story</h3>
             <h3>Membership</h3>
             <h3>Write</h3>
@@ -24,7 +25,10 @@ function Header() {
             </h3>
           </div>
         </div>
-        <div className="flex items-center justify-between border-y border-black bg-[#febf17] py-10 lg:py-0 col-span-full">
+      </div>
+      <hr />
+      <div className="col-start-2 col-end-16 grid">
+        <div className="col-span-full flex items-center justify-between border-y border-black bg-[#febf17] py-10 lg:py-0">
           <div className="space-y-5">
             <h2
               className="font-serif lg:tracking-tighter"
@@ -42,7 +46,7 @@ function Header() {
           </div>
           <img src="/heroSvg.svg" alt="" />
         </div>
-      
+      </div>
     </header>
   )
 }
