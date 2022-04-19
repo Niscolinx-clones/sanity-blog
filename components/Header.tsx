@@ -3,8 +3,8 @@ import React from 'react'
 
 function Header() {
   return (
-    <header className="grid-cols-18 grid w-full bg-[#febf17] ">
-      <div className="col-end-18 col-start-2 grid">
+    <header className="grid w-full grid-cols-18 bg-[#febf17] ">
+      <div className="col-start-2 col-end-18 grid">
         <div className="flex items-center justify-between py-5 ">
           <div>
             <Link href="/">
@@ -15,7 +15,7 @@ function Header() {
               />
             </Link>
           </div>
-          <div className="flex items-center  space-x-5 text-sm font-light text-black">
+          <div className="flex items-center  space-x-5 text-sm font-light text-black bg-green-400:not(:last)">
             <h3>Our story</h3>
             <h3>Membership</h3>
             <h3>Write</h3>
@@ -27,10 +27,10 @@ function Header() {
         </div>
       </div>
       <hr className="col-span-full border-black" />
-      <div className="col-[2/-1] grid relative overflow-hidden">
+      <div className="relative col-[2/-1] grid overflow-hidden">
         <div className="col-span-full flex items-center justify-between  bg-[#febf17] py-24">
-          <div className="space-y-5">
-            <h2 className="font-serif leading-[95px] text-6xl md:text-[95px] lg:text-[106px] lg:tracking-tighter ">
+          <div className="space-y-5 pr-6 ">
+            <h2 className="font-serif text-7xl tracking-tighter md:text-[95px] lg:text-[106px] lg:leading-[95px] ">
               Stay curious.
             </h2>
             <h3 className="text-2xl text-[#292929] md:w-[500px] lg:w-[550px]">
@@ -41,9 +41,8 @@ function Header() {
               Start reading
             </button>
           </div>
-          <div className="hidden absolute w-[585px] left-[420px] lg:right-0 lg:left-auto md:block">
-
-          <img src="/heroSvg.svg" alt="" className='ml-16'/>
+          <div className="absolute left-[420px] hidden w-[585px] md:block lg:right-0 lg:left-auto">
+            <img src="/heroSvg.svg" alt="" className="ml-16" />
           </div>
         </div>
       </div>
