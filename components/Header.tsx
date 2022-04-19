@@ -31,8 +31,7 @@ function Header() {
         <div className="col-span-full flex items-center justify-between  bg-[#febf17] py-10 lg:py-0">
           <div className="space-y-5">
             <h2
-              className="font-serif lg:tracking-tighter"
-              style={{ fontSize: '106px', lineHeight: '95px' }}
+              className="font-serif lg:tracking-tighter leading-[95px] text-[106px]"
             >
               Stay curious.
             </h2>
