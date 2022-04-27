@@ -37,7 +37,7 @@ function Header() {
               Discover stories, thinking, and expertise from writers on any
               topic.
             </h3>
-            <button className="bg-black py-3 px-4 text-xl text-white">
+            <button className="bg-black py-2 px-6 text-xl text-white rounded-lg">
               Start reading
             </button>
           </div>
