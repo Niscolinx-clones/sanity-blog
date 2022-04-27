@@ -4,7 +4,7 @@ import React from 'react'
 function Header() {
   return (
     <header className="grid w-full grid-cols-18 bg-[#febf17] ">
-      <div className="col-start-2 col-end-18 grid">
+      <div className="col-start-2 col-end-18 grid bg-black">
         <div className="flex items-center justify-between py-5 ">
           <div>
             <Link href="/">
