@@ -20,7 +20,7 @@ function Header() {
             <h3>Membership</h3>
             <h3>Write</h3>
             <h3>Sign In</h3>
-            <h3 className="rounded-full bg-black px-4 py-3 text-white">
+            <h3 className="rounded-full bg-black px-5 py-3 text-white">
               Get Started
             </h3>
           </div>
@@ -37,7 +37,7 @@ function Header() {
               Discover stories, thinking, and expertise from writers on any
               topic.
             </h3>
-            <button className="bg-black py-2 px-6 text-xl text-white rounded-lg">
+            <button className="bg-black py-2 px-8 text-xl text-white rounded-full">
               Start reading
             </button>
           </div>
