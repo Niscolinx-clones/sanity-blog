@@ -3,8 +3,8 @@ import React from 'react'
 
 function Header() {
   return (
-    <header className="grid w-full grid-cols-18 bg-[#febf17] ">
-      <div className="col-start-2 col-end-18 grid bg-black">
+    <header className="grid w-full grid-cols-18 bg-[#febf17] border border-b border-black">
+      <div className="col-start-2 col-end-18 grid">
         <div className="flex items-center justify-between py-5 ">
           <div>
             <Link href="/">
@@ -37,7 +37,7 @@ function Header() {
               Discover stories, thinking, and expertise from writers on any
               topic.
             </h3>
-            <button className="bg-black py-3 px-4 text-3xl text-white">
+            <button className="bg-black py-3 px-4 text-xl text-white">
               Start reading
             </button>
           </div>
