@@ -3,7 +3,7 @@ import React from 'react'
 
 function Header() {
   return (
-    <header className="grid w-full grid-cols-18 bg-[#febf17] border border-b border-black">
+    <header className="grid w-full grid-cols-18 border border-b border-black bg-[#febf17]">
       <div className="col-start-2 col-end-18 grid">
         <div className="flex items-center justify-between py-5 ">
           <div>
@@ -15,7 +15,7 @@ function Header() {
               />
             </Link>
           </div>
-          <div className="flex items-center  space-x-5 text-sm font-light text-black bg-green-400:not(:last)">
+          <div className="flex last:hidden items-center space-x-5  text-sm font-light text-black nav_link">
             <h3>Our story</h3>
             <h3>Membership</h3>
             <h3>Write</h3>
@@ -33,11 +33,11 @@ function Header() {
             <h2 className="font-serif text-7xl tracking-tighter md:text-[95px] lg:text-[106px] lg:leading-[95px] ">
               Stay curious.
             </h2>
-            <h3 className="text-2xl text-[#292929] md:w-[500px] lg:w-[550px]">
+            <h3 className="py-4 text-2xl leading-6 text-[#292929] md:w-[500px] lg:w-[550px]">
               Discover stories, thinking, and expertise from writers on any
               topic.
             </h3>
-            <button className="bg-black py-2 px-8 text-xl text-white rounded-full">
+            <button className="rounded-full bg-black py-2 px-12 text-xl text-white">
               Start reading
             </button>
           </div>
