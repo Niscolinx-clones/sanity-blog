@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import Logo from './logo.svg'
 
 function Header() {
   return (
@@ -7,13 +8,15 @@ function Header() {
       <div className="col-start-2 col-end-18 grid">
         <div className="flex items-center justify-between py-5 ">
           <div>
-            <Link href="/">
-              <img
+            <Link href='/'>
+
+              {/* <img
                 src="https://links.papareact.com/yvf"
                 alt=""
                 className="-ml-2 w-44 cursor-pointer object-contain"
-              />
-            </Link>
+              /> */}
+              <Logo/>
+              </Link>
           </div>
           <div className="flex items-center space-x-5 text-sm font-light text-black">
             <div className="hidden space-x-5 lg:flex">
