@@ -6,6 +6,7 @@ function Main() {
     <div>
         <title>
             <img src="trending.svg" alt=''/>
+            <p>TRENDING ON MEDIUM</p>
         </title>
     </div>
   )
