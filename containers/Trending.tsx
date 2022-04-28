@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function Main() {
+function Trending() {
   return (
     <div>
         <title>
@@ -12,4 +12,4 @@ function Main() {
   )
 }
 
-export default Main
+export default Trending
