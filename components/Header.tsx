@@ -15,7 +15,7 @@ function Header() {
               />
             </Link>
           </div>
-          <div className="hidden lg:flex items-center space-x-5  text-sm font-light text-black nav__link">
+          <div className="flex items-center space-x-5  text-sm font-light text-black">
             <h3>Our story</h3>
             <h3>Membership</h3>
             <h3>Write</h3>
