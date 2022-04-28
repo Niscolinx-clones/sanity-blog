@@ -16,13 +16,19 @@ function Header() {
             </Link>
           </div>
           <div className="flex items-center space-x-5  text-sm font-light text-black">
+            <div className="hidden">
+
             <h3>Our story</h3>
             <h3>Membership</h3>
             <h3>Write</h3>
+            </div>
+            <div className="flex">
+
             <h3>Sign In</h3>
             <h3 className="rounded-full bg-black px-5 py-3 text-white">
               Get Started
             </h3>
+            </div>
           </div>
         </div>
       </div>
