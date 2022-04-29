@@ -10,12 +10,7 @@ function Header() {
           <div>
             <Link href='/'>
 
-              {/* <img
-                src="https://links.papareact.com/yvf"
-                alt=""
-                className="-ml-2 w-44 cursor-pointer object-contain"
-              /> */}
-              <Logo/>
+              <Logo className='text-sm'/>
               </Link>
           </div>
           <div className="flex items-center space-x-5 text-sm font-light text-black">
