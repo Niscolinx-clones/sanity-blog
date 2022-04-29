@@ -3,10 +3,9 @@ import TrendingSvg from '../assets/svgs/trending.svg'
 
 function Trending() {
   return (
-    <div>
-      <header className='flex'>
-        <TrendingSvg/>
-        
+    <div className="col-start-2 col-end-18 grid bg-blue-800">
+      <header className="flex">
+        <TrendingSvg />
         <p>TRENDING ON MEDIUM</p>
       </header>
     </div>

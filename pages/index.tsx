@@ -6,13 +6,13 @@ import Trending from '../containers/Trending'
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className="grid w-full grid-cols-18">
       <Head>
         <title>Medium Blogn Clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Trending/>
+      <Trending />
     </div>
   )
 }
