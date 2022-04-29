@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
-import Logo from './logo.svg'
+import Logo from '../assets/svgs/logo.svg'
+import HeroSvg from '../assets/svgs/heroSvg.svg'
 
 function Header() {
   return (
@@ -44,7 +45,7 @@ function Header() {
             </button>
           </div>
           <div className="absolute left-[420px] hidden w-[585px] md:block lg:right-0 lg:left-auto">
-            <img src="/heroSvg.svg" alt="" className="ml-16" />
+            <HeroSvg className="ml-16" />
           </div>
         </div>
       </div>
