@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Medium Blog</title>
+        <title>Medium Blogn Clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
