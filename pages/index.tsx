@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import 'virtual:windi.css'
 import Head from 'next/head'
 import Header from '../components/Header'
 import Trending from '../containers/Trending'
