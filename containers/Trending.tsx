@@ -6,7 +6,7 @@ function Trending() {
     <div className="col-start-2 col-end-18 grid bg-blue-800">
       <header className="flex">
         <TrendingSvg />
-        <p>TRENDING ON MEDIUM</p>
+        <p className='font-bold text-xs'>Trending on Medium</p>
       </header>
     </div>
   )
