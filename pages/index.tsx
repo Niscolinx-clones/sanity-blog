@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <div className="grid w-full grid-cols-18">
       <Head>
-        <title>Medium Blogn Clone</title>
+        <title>Medium Blog Clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />

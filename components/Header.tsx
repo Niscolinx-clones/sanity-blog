@@ -30,7 +30,7 @@ function Header() {
       </div>
       <hr className="col-span-full border-black" />
       <div className="relative col-[1/-1] grid grid-cols-18 overflow-hidden bg-[#febf17]">
-        <div className="grid items-center justify-between py-24 ">
+        <div className="grid col-start-2  items-center justify-between py-24 ">
           <div className="space-y-5 pr-6 ">
             <h2 className="font-serif text-7xl tracking-tighter md:text-[95px] lg:text-[106px] lg:leading-[95px] ">
               Stay curious.
