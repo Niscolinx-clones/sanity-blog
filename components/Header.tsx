@@ -5,8 +5,8 @@ import HeroSvg from '../assets/svgs/heroSvg.svg'
 
 function Header() {
   return (
-    <header className="contents w-full border border-b border-black bg-[#febf17]">
-      <div className="col-start-2 col-end-18 grid">
+    <header className="grid-cols-18 col-span-full grid">
+      <div className="col-end-18 col-start-2 grid">
         <div className="flex items-center justify-between py-5 ">
           <div>
             <Link href="/">
@@ -28,9 +28,10 @@ function Header() {
           </div>
         </div>
       </div>
+
       <hr className="col-span-full border-black" />
-      <div className="relative col-[1/-1] grid grid-cols-18 overflow-hidden bg-[#febf17]">
-        <div className="grid col-start-2  items-center justify-between py-24 ">
+      <div className="grid-cols-18 relative col-span-full grid overflow-hidden bg-[#febf17]">
+        <div className="col-start-2 grid  items-center justify-between py-24 ">
           <div className="space-y-5 pr-6 ">
             <h2 className="font-serif text-7xl tracking-tighter md:text-[95px] lg:text-[106px] lg:leading-[95px] ">
               Stay curious.
