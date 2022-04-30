@@ -2,6 +2,7 @@
 const path = require('path')
 const WindiCSSWebpackPlugin = require('windicss-webpack-plugin')
 
+
 module.exports = {
   reactStrictMode: true,
   sassOptions: {
@@ -14,7 +15,7 @@ module.exports = {
       use: [{ loader: '@svgr/webpack', options: { icons: true } }],
     })
 
-    config.plugins.push(new WindiCSSWebpackPlugin())
+   config.plugins.push(new WindiCSSWebpackPlugin())
 
     return config
   },
