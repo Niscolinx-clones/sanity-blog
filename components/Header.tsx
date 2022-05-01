@@ -5,7 +5,7 @@ import HeroSvg from '../assets/svgs/heroSvg.svg'
 
 function Header() {
   return (
-    <header className="grid-cols-18 col-span-full grid">
+    <header className="grid-cols-18 col-span-full grid bg-[#febf17]">
       <div className="col-end-18 col-start-2 grid">
         <div className="flex items-center justify-between py-5 ">
           <div>
@@ -31,12 +31,12 @@ function Header() {
 
       <hr className="col-span-full border-black" />
       <div className="grid-cols-18 relative col-span-full grid overflow-hidden bg-[#febf17]">
-        <div className="col-start-2 grid  items-center justify-between py-24 ">
-          <div className="space-y-5 pr-6 ">
+        <div className="col-start-2 col-end-[-1] grid  items-center justify-between py-24 ">
+          <div className="space-y-5 pr-6">
             <h2 className="font-serif text-7xl tracking-tighter md:text-[95px] lg:text-[106px] lg:leading-[95px] ">
               Stay curious.
             </h2>
-            <h3 className="py-4 text-2xl leading-6 text-[#292929] md:w-[500px] lg:w-[550px]">
+            <h3 className="w-4/5 py-4 text-2xl leading-6 text-[#292929] md:w-3/5">
               Discover stories, thinking, and expertise from writers on any
               topic.
             </h3>
@@ -49,6 +49,7 @@ function Header() {
           </div>
         </div>
       </div>
+      <div className="absolute bg-[#febf17]"></div>
     </header>
   )
 }
