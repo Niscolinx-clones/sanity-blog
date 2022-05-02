@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React, { ElementType, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Logo from '../assets/svgs/logo.svg'
 import HeroSvg from '../assets/svgs/heroSvg.svg'
 
@@ -11,6 +11,13 @@ function Header() {
     elRef.current = calHeight?.clientHeight
      console.log('useRef', elRef.current)
    })
+
+   useEffect(() => {
+     window.addEventListener('resize', () => {
+       console.log()
+     })
+   }, [elRef.current])
+
   return (
     <header className="grid-cols-18 col-span-full grid bg-[#febf17] header__height">
       <div className="-z-1 absolute left-0 h-[37%] w-screen bg-[#febf17]"></div>
