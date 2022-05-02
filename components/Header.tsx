@@ -15,6 +15,7 @@ function Header() {
   }
 
   useEffect(() => {
+    getHeightSize()
     console.log('the height', height)
   }, [height])
 
@@ -24,7 +25,7 @@ function Header() {
 
   return (
     <header className="grid-cols-18 header__height col-span-full grid bg-[#febf17]">
-      <div className="-z-1 absolute left-0 h-[37%] w-screen bg-[#febf17]"></div>
+      <div className={`-z-1 absolute left-0 h-${height} w-screen bg-[#febf17]`}></div>
 
       <div className="col-end-18 col-start-2 grid">
         <div className="flex items-center justify-between py-5 ">
