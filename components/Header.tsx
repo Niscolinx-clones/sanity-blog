@@ -5,8 +5,7 @@ import HeroSvg from '../assets/svgs/heroSvg.svg'
 
 function Header() {
   return (
-    <header className="grid-cols-18 col-span-full grid relative">
-<div className="absolute bg-[#febf17] w-screen h-full -z-1"></div>
+    <header className="grid-cols-18 col-span-full grid">
       <div className="col-end-18 col-start-2 grid">
         <div className="flex items-center justify-between py-5 ">
           <div>
