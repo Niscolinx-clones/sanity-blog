@@ -1,12 +1,20 @@
 import type { NextPage } from 'next'
+import { useState, useRef, useEffect} from 'react'
 import Head from 'next/head'
 import Header from '../components/Header'
 import Trending from '../containers/Trending'
 
+//const calHeight = window.document.querySelector('.header__height')
 const Home: NextPage = () => {
-  const calHeight = document.querySelector('.header__height')
 
-  console.log({calHeight})
+  //console.log('calheight', calHeight.offsetWidth())
+
+  useEffect(() => {
+        window.addEventListener('resize', (size:UIEvent) => {
+          console.log('window resized', size)
+        })
+
+  })
   return (
     <div className="grid-cols-18 mx-auto grid w-full max-w-7xl">
       <Head>
