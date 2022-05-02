@@ -3,9 +3,7 @@ import React, { useEffect } from 'react'
 import Logo from '../assets/svgs/logo.svg'
 import HeroSvg from '../assets/svgs/heroSvg.svg'
 
-function Header(props: any) {
-  console.log(props.getHeight)
-
+function Header() {
    useEffect(() => {
      const calHeight = window.document.querySelector('.header__height')
 
