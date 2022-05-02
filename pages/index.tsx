@@ -1,19 +1,19 @@
 import type { NextPage } from 'next'
-import { useState, useRef, useEffect} from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Head from 'next/head'
 import Header from '../components/Header'
 import Trending from '../containers/Trending'
 
-//const calHeight = window.document.querySelector('.header__height')
 const Home: NextPage = () => {
+  const elRef = useRef()
+  useEffect(() => {
+    const calHeight = window.document.querySelector('.header__height')
 
-  //console.log('calheight', calHeight.offsetWidth())
+    console.log('calheight', calHeight)
+  })
 
   useEffect(() => {
-        window.addEventListener('resize', (size:UIEvent) => {
-          console.log('window resized', size)
-        })
-
+    console.log('the ref', elRef.current)
   })
   return (
     <div className="grid-cols-18 mx-auto grid w-full max-w-7xl">
@@ -21,8 +21,8 @@ const Home: NextPage = () => {
         <title>Medium Blog Clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="relative contents header__height">
-        <Header/>
+      <div className="header__height relative contents">
+        <Header />
         <div className="-z-1 absolute left-0 h-[37%] w-screen bg-[#febf17]"></div>
       </div>
       <Trending />
