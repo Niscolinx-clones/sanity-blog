@@ -6,7 +6,7 @@ import HeroSvg from '../assets/svgs/heroSvg.svg'
 function Header() {
   return (
     <header className="grid-cols-18 col-span-full grid relative">
-<div className="absolute bg-[#febf17]"></div>
+<div className="absolute bg-[#febf17] w-screen h-full -z-1"></div>
       <div className="col-end-18 col-start-2 grid">
         <div className="flex items-center justify-between py-5 ">
           <div>
@@ -31,7 +31,7 @@ function Header() {
       </div>
 
       <hr className="col-span-full border-black" />
-      <div className="grid-cols-18 relative col-span-full grid overflow-hidden bg-[#febf17]">
+      <div className="grid-cols-18 relative col-span-full grid overflow-hidden">
         <div className="col-start-2 col-end-[-1] grid  items-center justify-between py-24 ">
           <div className="space-y-5 pr-6">
             <h2 className="font-serif text-7xl tracking-tighter md:text-[95px] lg:text-[106px] lg:leading-[95px] ">
