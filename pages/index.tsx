@@ -9,20 +9,20 @@ const Home: NextPage = () => {
   useEffect(() => {
     const calHeight = window.document.querySelector('.header__height')
 
-    console.log('calheight', calHeight)
+    console.log('calheight', calHeight?.clientHeight)
   })
 
   useEffect(() => {
     console.log('the ref', elRef.current)
   })
   return (
-    <div className="grid-cols-18 mx-auto grid w-full max-w-7xl">
+    <div className="grid-cols-18 header__height mx-auto grid w-full max-w-7xl">
       <Head>
         <title>Medium Blog Clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="header__height relative contents">
-        <Header />
+      <div className="relative contents">
+        <Header getHeight/>
         <div className="-z-1 absolute left-0 h-[37%] w-screen bg-[#febf17]"></div>
       </div>
       <Trending />
