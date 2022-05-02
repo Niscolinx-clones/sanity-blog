@@ -3,9 +3,12 @@ import React from 'react'
 import Logo from '../assets/svgs/logo.svg'
 import HeroSvg from '../assets/svgs/heroSvg.svg'
 
-function Header() {
+function Header(props: any) {
+  console.log(props.getHeight)
   return (
     <header className="grid-cols-18 col-span-full grid bg-[#febf17]">
+      <div className="-z-1 absolute left-0 h-[37%] w-screen bg-[#febf17]"></div>
+
       <div className="col-end-18 col-start-2 grid">
         <div className="flex items-center justify-between py-5 ">
           <div>
