@@ -1,22 +1,23 @@
 import Link from 'next/link'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Logo from '../assets/svgs/logo.svg'
 import HeroSvg from '../assets/svgs/heroSvg.svg'
 
 function Header() {
   const elRef = useRef<| undefined | null | number>(null)
+  const [height, setHeight] = useState<number>()
    useEffect(() => {
      const calHeight = window.document.querySelector('.header__height')
     
     elRef.current = calHeight?.clientHeight
-     console.log('useRef', elRef.current)
+    setHeight(elRef.current)
    })
 
    useEffect(() => {
      window.addEventListener('resize', () => {
-       console.log()
+       console.log('resized')
      })
-   }, [elRef.current])
+   })
 
   return (
     <header className="grid-cols-18 col-span-full grid bg-[#febf17] header__height">
