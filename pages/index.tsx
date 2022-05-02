@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       </Head>
       <div className="relative contents">
         <Header />
-        <div className="-z-1 absolute left-0 h-full w-screen bg-[#febf17]"></div>
+        <div className="-z-1 absolute left-0 h-[37%] w-screen bg-[#febf17]"></div>
       </div>
       <Trending />
     </div>
