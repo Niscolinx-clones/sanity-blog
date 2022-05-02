@@ -14,15 +14,12 @@ function Header() {
     setHeight(elRef.current)
   }
 
-  useEffect(() => {})
+  useEffect(() => {
+    console.log('the height', height)
+  }, [height])
 
   useEffect(() => {
-    window.addEventListener('resize', () => {
-      const calHeight = window.document.querySelector('.header__height')
-
-      elRef.current = calHeight?.clientHeight
-      console.log('resized', elRef.current)
-    })
+    window.addEventListener('resize', getHeightSize)
   })
 
   return (
