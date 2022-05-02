@@ -4,26 +4,29 @@ import Logo from '../assets/svgs/logo.svg'
 import HeroSvg from '../assets/svgs/heroSvg.svg'
 
 function Header() {
-  const elRef = useRef<| undefined | null | number>(null)
+  const elRef = useRef<undefined | null | number>(null)
   const [height, setHeight] = useState<number>()
-   useEffect(() => {
-     const calHeight = window.document.querySelector('.header__height')
-    
+
+  const getHeightSize = () => {
+    const calHeight = window.document.querySelector('.header__height')
+
     elRef.current = calHeight?.clientHeight
     setHeight(elRef.current)
-   })
+  }
 
-   useEffect(() => {
-     window.addEventListener('resize', () => {
-       const calHeight = window.document.querySelector('.header__height')
-       
-       elRef.current = calHeight?.clientHeight
-       console.log('resized', elRef.current)
-     })
-   })
+  useEffect(() => {})
+
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      const calHeight = window.document.querySelector('.header__height')
+
+      elRef.current = calHeight?.clientHeight
+      console.log('resized', elRef.current)
+    })
+  })
 
   return (
-    <header className="grid-cols-18 col-span-full grid bg-[#febf17] header__height">
+    <header className="grid-cols-18 header__height col-span-full grid bg-[#febf17]">
       <div className="-z-1 absolute left-0 h-[37%] w-screen bg-[#febf17]"></div>
 
       <div className="col-end-18 col-start-2 grid">
