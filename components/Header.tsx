@@ -1,13 +1,15 @@
 import Link from 'next/link'
-import React, { useEffect } from 'react'
+import React, { ElementType, useEffect, useRef } from 'react'
 import Logo from '../assets/svgs/logo.svg'
 import HeroSvg from '../assets/svgs/heroSvg.svg'
 
 function Header() {
+  const elRef = useRef<| undefined | null | number>(null)
    useEffect(() => {
      const calHeight = window.document.querySelector('.header__height')
-
-     console.log('calheight', calHeight?.clientHeight)
+    
+    elRef.current = calHeight?.clientHeight
+     console.log('useRef', elRef.current)
    })
   return (
     <header className="grid-cols-18 col-span-full grid bg-[#febf17] header__height">
