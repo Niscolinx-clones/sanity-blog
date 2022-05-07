@@ -16,7 +16,7 @@ function Header() {
 
   useEffect(() => {
     getHeightSize()
-    console.log('called!!')
+    console.log("height")
   }, [height])
 
   useEffect(() => {
@@ -25,6 +25,7 @@ function Header() {
 
   return (
     <header className="grid-cols-18 header__height col-span-full grid">
+      <div className="-z-1 absolute left-0 w-screen bg-[#febf17]" style={{height}}></div>
 
       <div className="col-end-18 col-start-2 grid">
         <div className="flex items-center justify-between py-5 ">
