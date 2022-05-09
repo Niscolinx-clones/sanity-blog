@@ -50,7 +50,7 @@ function Header() {
         </div>
       </div>
 
-      <hr className="col-span-full border-black w-full" />
+      <hr className="col-span-full border-black w-full absolute left-0 top-20" />
       <div className="grid-cols-18 relative col-span-full grid overflow-hidden">
         <div className="col-start-2 col-end-[-1] grid  items-center justify-between py-24 ">
           <div className="space-y-5 pr-6">
