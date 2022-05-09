@@ -1,4 +1,5 @@
-import { createClient, createImageUrlBuilder } from 'next-sanity'
+import { createClient,   } from 'next-sanity'
+import imageUrlBuilder from '@sanity/image-url'
 
 const config = {
   /**
@@ -22,6 +23,10 @@ const config = {
  * Read more: https://www.sanity.io/docs/image-url
  **/
 export const urlFor = (source) => createImageUrlBuilder(config).image(source)
+const builder = imageUrlBuilder({
+    clientConfig: config
+})
+
 
 // Set up the client for fetching data in the getProps page functions
 export const sanityClient = createClient(config)
