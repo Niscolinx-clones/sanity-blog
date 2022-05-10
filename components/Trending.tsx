@@ -5,12 +5,9 @@ import { urlFor } from '../sanity'
 import { PostProps } from '../typings'
 
 function Trending({ posts }: PostProps) {
-  const date = new Date('2022-04-27T14:20:01Z')
+  
 
-  console.log(date.toLocaleString('en-US', {
-    day: '2-digit',
-    month: 'short'
-  }))
+
   
   return (
     <div className="col-end-18 col-start-2 mt-10 grid">
@@ -19,6 +16,14 @@ function Trending({ posts }: PostProps) {
         <p className="ml-2 text-xs font-bold uppercase">Trending on Medium</p>
       </header>
       {posts.map((post) => {
+        const date = new Date()
+
+        console.log(
+          date.toLocaleString('en-US', {
+            day: '2-digit',
+            month: 'short',
+          })
+        )
         return (
           <div key={post._id}>
             <span>01</span>
