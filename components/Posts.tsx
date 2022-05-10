@@ -7,8 +7,8 @@ interface Props {
 }
 
 
-export default function Posts(props){
-console.log(props)
+export default function Posts({posts}: Props){
+console.log(posts)
 
 return <div>
 
