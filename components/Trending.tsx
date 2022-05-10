@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import TrendingSvg from '../assets/svgs/trending.svg'
 import { urlFor } from '../sanity'
 import { PostProps } from '../typings'
 
 function Trending({ posts }: PostProps) {
-  const [fetchedPosts, setFetchedPosts] = useState<object[]>([])
+  const [fetchedPosts, setFetchedPosts] = useState()
 
   const formatDate = (dateToFormat: string): string => {
 
@@ -19,12 +19,16 @@ function Trending({ posts }: PostProps) {
     return updatedDate
   }
 
-  posts.map((post) => {
-    const updatedPost = {...post}
-    updatedPost._createdAt = formatDate(updatedPost._createdAt)
-    setFetchedPosts((prev) => [...prev, updatedPost])
-  })
-  
+  useEffect(() => {
+
+    posts.map((post) => {
+      const updatedPost = {...post}
+      updatedPost._createdAt = formatDate(updatedPost._createdAt)
+    })
+    
+  }, [])
+
+  console.log({fetchedPosts})
 
   return (
     <div className="col-end-18 col-start-2 mt-10 grid">
