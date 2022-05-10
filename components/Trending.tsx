@@ -6,7 +6,7 @@ import { PostProps } from '../typings'
 
 function Trending({posts}: PostProps) {
   return (
-    <div className="col-end-18 col-start-2 grid bg-blue-700">
+    <div className="col-end-18 col-start-2 grid">
       <header className="flex">
         <TrendingSvg />
         <p className="text-xs font-bold uppercase">Trending on Medium</p>
