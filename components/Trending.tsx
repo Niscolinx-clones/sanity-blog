@@ -42,7 +42,7 @@ function Trending({ posts }: PostProps) {
         <p className="ml-2 text-xs font-bold uppercase">Trending on Medium</p>
       </header>
       {fetchedPosts && fetchedPosts.map((post) => {
-        console.log(post)
+        console.log(post.title)
         return (
           <div key={post._id}>
             <span>01</span>
