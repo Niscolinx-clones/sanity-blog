@@ -1,4 +1,3 @@
-import { INSPECT_MAX_BYTES } from 'buffer'
 import Link from 'next/link'
 import React, {useState} from 'react'
 import TrendingSvg from '../assets/svgs/trending.svg'
@@ -6,7 +5,7 @@ import { urlFor } from '../sanity'
 import { PostProps } from '../typings'
 
 function Trending({ posts }: PostProps) {
-  const [fetchedPosts, setFetchedPosts] = useState()
+  const [fetchedPosts, setFetchedPosts] = useState<object[]>([])
 
   const formatDate = (dateToFormat: string): string => {
 
@@ -23,8 +22,7 @@ function Trending({ posts }: PostProps) {
   posts.map((post) => {
     const updatedPost = {...post}
     updatedPost._createdAt = formatDate(updatedPost._createdAt)
-
-    console.log({updatedPost})
+    setFetchedPosts((prev) => [...prev, updatedPost])
   })
   
 
