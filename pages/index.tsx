@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import Posts from '../components/Posts'
 import Trending from '../components/Trending'
 import { sanityClient } from '../sanity'
-import { Post, PostProps } from '../typings'
+import { PostProps } from '../typings'
 
 
 const Home: NextPage<PostProps> = ({posts}) => {
