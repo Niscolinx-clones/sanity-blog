@@ -4,7 +4,6 @@ import Logo from '../assets/svgs/logo.svg'
 import HeroSvg from '../assets/svgs/heroSvg.svg'
 
 function Header() {
-  const ref = React.createRef()
   const elRef = useRef<undefined | null | number>(null)
   const [height, setHeight] = useState<number>()
 
@@ -30,7 +29,7 @@ function Header() {
       <div className="col-end-18 col-start-2 grid">
         <div className="flex items-center justify-between py-5 ">
           <div>
-            <Link href="/" ref={ref}>
+            <Link href="/">
               <Logo className="text-sm" />
             </Link>
           </div>
