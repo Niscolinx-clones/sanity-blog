@@ -1,14 +1,7 @@
-import { Post, PostProps } from "../typings";
+import { PostProps } from '../typings'
 
+export default function Posts({ posts }: PostProps) {
+  console.log(posts)
 
-
-
-export default function Posts({posts}: PostProps){
-console.log(posts)
-
-return <div>
-
-</div>
+  return <div></div>
 }
-
-
