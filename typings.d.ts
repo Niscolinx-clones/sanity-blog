@@ -16,3 +16,7 @@ export interface Post {
     };
     body: [object]
 }
+
+export interface PostProps {
+  posts: [Post]
+}

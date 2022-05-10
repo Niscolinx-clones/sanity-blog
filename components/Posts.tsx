@@ -1,13 +1,9 @@
-import { NextPage } from "next";
-import { sanityClient } from "../sanity";
-import { Post } from "../typings";
-
-interface Props {
-  posts: [Post]
-}
+import { Post, PostProps } from "../typings";
 
 
-export default function Posts({posts}: Props){
+
+
+export default function Posts({posts}: PostProps){
 console.log(posts)
 
 return <div>
