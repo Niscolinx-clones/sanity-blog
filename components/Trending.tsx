@@ -39,6 +39,7 @@ function Trending({ posts }: PostProps) {
               </>
             </Link>
             <p>{post._createdAt}</p>
+            <p>{formatDate(post._createdAt)}</p>
           </div>
         )
       })}
