@@ -5,7 +5,7 @@ import { urlFor } from '../sanity'
 import { Post, PostProps } from '../typings'
 
 function Trending({ posts }: PostProps) {
-  const [fetchedPosts, setFetchedPosts] = useState([])
+  const [fetchedPosts, setFetchedPosts] = useState<Post[]>([])
 
   const formatDate = (dateToFormat: string): string => {
 
@@ -21,7 +21,7 @@ function Trending({ posts }: PostProps) {
 
   useEffect(() => {
 
-    let tempPosts:any = []
+    let tempPosts: Post[] = []
     posts.map((post) => {
       const updatedPost = {...post}
       updatedPost._createdAt = formatDate(updatedPost._createdAt)
