@@ -5,23 +5,19 @@ import { urlFor } from '../sanity'
 import { PostProps } from '../typings'
 
 function Trending({ posts }: PostProps) {
+  
+  const formatDate = () => {
+    const date = new Date()
 
-  const date = new Date()
-
-  date.toLocaleString('en-US', {
-    day: '2-digit',
-    month: 'short',
-  })
-
-  const changeDate = [{ ...posts, ['title']: '' }]
-
-  console.log(changeDate)
+    date.toLocaleString('en-US', {
+      day: '2-digit',
+      month: 'short',
+    })
+  }
 
   return (
     <div className="col-end-18 col-start-2 mt-10 grid">
       <header className="mb-3 flex items-center">
-        
-
         <TrendingSvg />
         <p className="ml-2 text-xs font-bold uppercase">Trending on Medium</p>
       </header>
