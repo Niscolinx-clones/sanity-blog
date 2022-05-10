@@ -6,7 +6,8 @@ import { PostProps } from '../typings'
 
 function Trending({ posts }: PostProps) {
   const date = new Date('2022-04-27T14:20:01Z')
-  console.log(date.toLocaleDateString('default', {
+  console.log(date.toLocaleString('default', {
+    day: 'numeric',
     month: 'long'
   }))
   return (
