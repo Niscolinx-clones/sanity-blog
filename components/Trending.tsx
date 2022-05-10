@@ -21,7 +21,9 @@ function Trending({ posts }: PostProps) {
   }
 
   console.log('posts', posts)
-  posts.map()
+  posts.map((post) => {
+    console.log({post})
+  })
   
 
   return (
