@@ -14,9 +14,9 @@ function Trending({ posts }: PostProps) {
     month: 'short',
   })
 
-  const changeDate = [...posts]
+  const changeDate = [{ ...posts, ['title']: '' }]
 
-  console.log({ changeDate })
+  console.log(changeDate)
 
   return (
     <div className="col-end-18 col-start-2 mt-10 grid">
