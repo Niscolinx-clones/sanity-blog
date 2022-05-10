@@ -5,8 +5,7 @@ import { urlFor } from '../sanity'
 import { PostProps } from '../typings'
 
 function Trending({ posts }: PostProps) {
-  const formatDate = (dateToFormat: string) => {
-    const date = new Date(dateToFormat)
+    const date = new Date()
 
     date.toLocaleString('en-US', {
       day: '2-digit',
@@ -15,7 +14,7 @@ function Trending({ posts }: PostProps) {
 
     console.log({date})
     return date
-  }
+  
 
   return (
     <div className="col-end-18 col-start-2 mt-10 grid">
