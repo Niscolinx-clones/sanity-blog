@@ -8,7 +8,7 @@ function Trending({ posts }: PostProps) {
 
   const formatDate = (dateToFormat: string):Date => {
 
-    const date = new Date()
+    const date = new Date(dateToFormat)
 
     date.toLocaleString('en-US', {
       day: '2-digit',
@@ -18,6 +18,8 @@ function Trending({ posts }: PostProps) {
     console.log({date})
     return date
   }
+
+  console.log('posts', posts)
   
 
   return (
