@@ -17,6 +17,9 @@ function Trending({ posts }: PostProps) {
 
  const createdAt = date
 
+
+ console.log(posts)
+
   
   return (
     <div className="col-end-18 col-start-2 mt-10 grid">
@@ -25,7 +28,6 @@ function Trending({ posts }: PostProps) {
         <p className="ml-2 text-xs font-bold uppercase">Trending on Medium</p>
       </header>
       {posts.map((post) => {
-       setGetDate(post._createdAt)
         return (
           <div key={post._id}>
             <span>01</span>
