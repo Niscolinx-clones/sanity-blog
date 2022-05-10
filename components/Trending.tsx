@@ -5,9 +5,9 @@ import { urlFor } from '../sanity'
 import { PostProps } from '../typings'
 
 function Trending({ posts }: PostProps) {
-  const date = new Intl.DateTimeFormat('2022-04-27T14:20:01Z')
+  const date = new Date('2022-04-27T14:20:01Z')
 
-  console.log(date)
+  console.log(date.toLocaleString())
   
   return (
     <div className="col-end-18 col-start-2 mt-10 grid">
