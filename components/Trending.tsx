@@ -17,8 +17,8 @@ function Trending({ posts }: PostProps) {
             <span>01</span>
             <Link href={`/posts/${post.slug.current}`}>
               <>
+                <img src={urlFor(post.author.image).url()} alt="author picture" className=''/>
                 <p>{post.title}</p>
-                <img src={urlFor(post.author.image).url()} alt="" />
               </>
             </Link>
           </div>
