@@ -16,14 +16,14 @@ function Trending({ posts }: PostProps) {
         <p className="ml-2 text-xs font-bold uppercase">Trending on Medium</p>
       </header>
       {posts.map((post) => {
-        const date = new Date()
+        const date = new Date(post._createdAt)
 
-        console.log(
           date.toLocaleString('en-US', {
             day: '2-digit',
             month: 'short',
           })
-        )
+        
+        const createdAt = date
         return (
           <div key={post._id}>
             <span>01</span>
@@ -34,7 +34,7 @@ function Trending({ posts }: PostProps) {
                 <p>{post.title}</p>
               </>
             </Link>
-            <p>{post._createdAt}</p>
+            <p>{createdAt}</p>
           </div>
         )
       })}
