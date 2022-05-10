@@ -1,3 +1,4 @@
+import { create } from 'domain'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import TrendingSvg from '../assets/svgs/trending.svg'
@@ -14,9 +15,9 @@ function Trending({ posts }: PostProps) {
     month: 'short',
   })
 
-  const createdAt = date
+  const createdAt = [...posts]
 
-  console.log(date)
+  console.log({createdAt})
 
   return (
     <div className="col-end-18 col-start-2 mt-10 grid">
