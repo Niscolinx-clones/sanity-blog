@@ -26,6 +26,7 @@ export default Home
 export const getServerSideProps = async () => {
   const query = `*[_type == "post"]{
       _id,
+      _createdAt,
       title,
      author -> {
         name,
