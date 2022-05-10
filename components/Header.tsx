@@ -16,7 +16,6 @@ function Header() {
 
   useEffect(() => {
     getHeightSize()
-    console.log("height!")
   }, [height])
 
   useEffect(() => {

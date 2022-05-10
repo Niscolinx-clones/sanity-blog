@@ -9,7 +9,9 @@ interface Props {
   posts: [Post]
 }
 
-const Home: NextPage<Props> = (props) => {
+export default function Home({posts}: Props) {
+  console.log({posts})
+  
   return (
     <div className="grid-cols-18  mx-auto grid w-full max-w-7xl">
       <Head>
@@ -22,7 +24,6 @@ const Home: NextPage<Props> = (props) => {
   )
 }
 
-export default Home
 
 export const getServerSideProps = async () => {
   const query = `*[_type == "post"]{
