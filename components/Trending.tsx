@@ -18,7 +18,7 @@ function Trending({ posts }: PostProps) {
  const createdAt = date
 
 
- console.log(posts)
+ console.log(date)
 
   
   return (
