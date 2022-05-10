@@ -5,7 +5,6 @@ import { urlFor } from '../sanity'
 import { PostProps } from '../typings'
 
 function Trending({ posts }: PostProps) {
-
   const formatDate = (dateToFormat: string) => {
     const date = new Date(dateToFormat)
 
@@ -14,6 +13,7 @@ function Trending({ posts }: PostProps) {
       month: 'short',
     })
 
+    console.log({date})
     return date
   }
 
@@ -39,7 +39,11 @@ function Trending({ posts }: PostProps) {
               </>
             </Link>
             <p>{post._createdAt}</p>
-            <p>{formatDate(post._createdAt)}</p>
+            <p>
+              {() => {
+                formatDate(post._createdAt)
+              }}
+            </p>
           </div>
         )
       })}
