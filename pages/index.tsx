@@ -16,7 +16,7 @@ const Home: NextPage<PostProps> = ({posts}) => {
       </Head>
       <Header />
       <Trending posts={posts} />
-      <Posts posts={posts} />
+      {/* <Posts posts={posts} /> */}
     </div>
   )
 }
