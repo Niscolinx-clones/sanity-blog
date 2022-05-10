@@ -8,24 +8,24 @@ import { PostProps } from '../typings'
 function Trending({ posts }: PostProps) {
   const [fetchedPosts, setFetchedPosts] = useState()
 
-  const formatDate = (dateToFormat: string):Date => {
+  const formatDate = (dateToFormat: string): any => {
 
     const date = new Date(dateToFormat)
 
-    date.toLocaleString('en-US', {
+    const updatedDate = date.toLocaleString('en-US', {
       day: '2-digit',
       month: 'short',
     })
 
-    console.log({date})
-    return date
+    console.log({updatedDate})
+    return updatedDate
   }
 
   console.log('posts', posts)
   posts.map((post) => {
     console.log({post})
     const updatedPost = {...post}
-    updatedPost._createdAt = ''
+    updatedPost._createdAt = formatDate(updatedPost._createdAt)
 
     console.log({updatedPost})
   })
