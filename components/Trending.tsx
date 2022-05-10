@@ -14,7 +14,7 @@ function Trending({ posts }: PostProps) {
       {posts.map((post) => {
         return (
           <div key={post._id}>
-            <span></span>
+            <span>01</span>
             <Link href={`/posts/${post.slug.current}`}>
               <>
                 <p>{post.title}</p>
