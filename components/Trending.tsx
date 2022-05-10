@@ -21,6 +21,8 @@ function Trending({ posts }: PostProps) {
   return (
     <div className="col-end-18 col-start-2 mt-10 grid">
       <header className="mb-3 flex items-center">
+        
+
         <TrendingSvg />
         <p className="ml-2 text-xs font-bold uppercase">Trending on Medium</p>
       </header>
