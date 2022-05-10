@@ -14,7 +14,7 @@ function Trending({ posts }: PostProps) {
     month: 'short',
   })
 
-  const changeDate = {...posts, ['_createdAt']: 'g'}
+  const changeDate = [...posts]
 
   console.log({ changeDate })
 
