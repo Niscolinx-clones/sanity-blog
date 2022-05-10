@@ -6,10 +6,9 @@ import { PostProps } from '../typings'
 
 function Trending({ posts }: PostProps) {
   const date = new Date('2022-04-27T14:20:01Z')
-  console.log(date.toLocaleString('default', {
-    day: 'numeric',
-    month: 'long'
-  }))
+
+  console.log(date.toLocaleDateString())
+  
   return (
     <div className="col-end-18 col-start-2 mt-10 grid">
       <header className="mb-3 flex items-center">
