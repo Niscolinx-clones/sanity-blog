@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
-import Trending from '../containers/Trending'
+import Trending from '../components/Trending'
 import { sanityClient } from '../sanity'
 import { Post } from '../typings'
 
