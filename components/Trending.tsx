@@ -13,7 +13,6 @@ function Trending({ posts }: PostProps) {
     })
 
     console.log({date})
-    return date
   
 
   return (
