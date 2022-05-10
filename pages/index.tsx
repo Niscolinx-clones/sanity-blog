@@ -4,7 +4,12 @@ import Header from '../components/Header'
 import Trending from '../containers/Trending'
 import { sanityClient } from '../sanity'
 
-const Home: NextPage = () => {
+
+interface Posts {
+
+}
+
+const Home: NextPage = (props) => {
   return (
     <div className="grid-cols-18  mx-auto grid w-full max-w-7xl">
       <Head>
@@ -35,6 +40,8 @@ export const getServerSideProps = async () => {
   const posts = await sanityClient.fetch(query)
 
   return {
-    props: posts
+    props: {
+      posts
+    }
   }
 }
