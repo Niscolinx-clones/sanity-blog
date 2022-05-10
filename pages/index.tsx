@@ -3,13 +3,13 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Trending from '../containers/Trending'
 import { sanityClient } from '../sanity'
+import { Post } from '../typings'
 
-
-interface Posts {
-
+interface Props {
+  posts: [Post]
 }
 
-const Home: NextPage = (props) => {
+const Home: NextPage<Props> = (props) => {
   return (
     <div className="grid-cols-18  mx-auto grid w-full max-w-7xl">
       <Head>
@@ -41,7 +41,7 @@ export const getServerSideProps = async () => {
 
   return {
     props: {
-      posts
-    }
+      posts,
+    },
   }
 }
