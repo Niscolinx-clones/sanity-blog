@@ -14,7 +14,7 @@ function Trending({ posts }: PostProps) {
     month: 'short',
   })
 
-  const createdAt = {...posts, _createdAt: ''}
+  const createdAt = ''
 
   console.log({ createdAt })
 
