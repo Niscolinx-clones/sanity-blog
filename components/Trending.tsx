@@ -5,7 +5,7 @@ import { urlFor } from '../sanity'
 import { Post, PostProps } from '../typings'
 
 function Trending({ posts }: PostProps) {
-  const [fetchedPosts, setFetchedPosts] = useState<object[]>([])
+  const [fetchedPosts, setFetchedPosts] = useState([])
 
   const formatDate = (dateToFormat: string): string => {
 
@@ -21,7 +21,7 @@ function Trending({ posts }: PostProps) {
 
   useEffect(() => {
 
-    let tempPosts: object[] = []
+    let tempPosts:any = []
     posts.map((post) => {
       const updatedPost = {...post}
       updatedPost._createdAt = formatDate(updatedPost._createdAt)
@@ -40,7 +40,7 @@ function Trending({ posts }: PostProps) {
         <TrendingSvg />
         <p className="ml-2 text-xs font-bold uppercase">Trending on Medium</p>
       </header>
-      {fetchedPosts && fetchedPosts.map((post) => {
+      {fetchedPosts && fetchedPosts.map((post: Post) => {
         console.log(post)
         return (
           <div key={post._id}>
