@@ -7,7 +7,11 @@ export default function Posts({ posts }: PostProps) {
   return (
     <div>
       {posts.map((post) => {
-        ;<Link href={`/posts/${post.slug.current}`}></Link>
+        return (
+          <Link href={`/posts/${post.slug.current}`}>
+            <p>{post.title}</p>
+          </Link>
+        )
       })}
     </div>
   )
