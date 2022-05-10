@@ -1,12 +1,21 @@
 import Link from 'next/link'
-import React from 'react'
+import React, {useState} from 'react'
 import TrendingSvg from '../assets/svgs/trending.svg'
 import { urlFor } from '../sanity'
 import { PostProps } from '../typings'
 
 function Trending({ posts }: PostProps) {
-  
 
+  const [getDate, setGetDate] = useState<string>()
+  
+ const date = new Date()
+
+ date.toLocaleString('en-US', {
+   day: '2-digit',
+   month: 'short',
+ })
+
+ const createdAt = date
 
   
   return (
@@ -16,14 +25,7 @@ function Trending({ posts }: PostProps) {
         <p className="ml-2 text-xs font-bold uppercase">Trending on Medium</p>
       </header>
       {posts.map((post) => {
-        const date = new Date(post._createdAt)
-
-          date.toLocaleString('en-US', {
-            day: '2-digit',
-            month: 'short',
-          })
-        
-        const createdAt = date
+       setGetDate(post._createdAt)
         return (
           <div key={post._id}>
             <span>01</span>
@@ -34,7 +36,7 @@ function Trending({ posts }: PostProps) {
                 <p>{post.title}</p>
               </>
             </Link>
-            <p>{createdAt}</p>
+            <p>{post._createdAt}</p>
           </div>
         )
       })}
