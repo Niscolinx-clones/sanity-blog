@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import { sanityClient } from "../sanity";
 import { Post } from "../typings";
 
 interface Props {
@@ -6,7 +7,7 @@ interface Props {
 }
 
 
-const Posts: NextPage<Props> = ({posts}) => {
+const Posts: NextPage = () => {
 console.log(posts)
 
 return <div>
@@ -16,24 +17,3 @@ return <div>
 
 export default Posts
 
-export const getServerSideProps = async () => {
-  const query = `*[_type == "post"]{
-      _id,
-      title,
-     author -> {
-        name,
-        image
-      },
-    description,
-    mainImage,
-    slug
-  }`
-
-  const posts = await sanityClient.fetch(query)
-
-  return {
-    props: {
-      posts,
-    },
-  }
-}
