@@ -13,9 +13,9 @@ function Trending({ posts }: PostProps) {
       </header>
       {posts.map((post) => {
         return (
-          <div>
+          <div key={post._id}>
             <span></span>
-            <Link href={`/posts/${post.slug.current}`} key={post._id}>
+            <Link href={`/posts/${post.slug.current}`}>
               <>
                 <p>{post.title}</p>
                 <img src={urlFor(post.author.image).url()} alt="" />
