@@ -5,6 +5,9 @@ import { urlFor } from '../sanity'
 import { PostProps } from '../typings'
 
 function Trending({ posts }: PostProps) {
+
+  const formatDate = (dateToFormat: string):Date => {
+
     const date = new Date()
 
     date.toLocaleString('en-US', {
@@ -13,6 +16,8 @@ function Trending({ posts }: PostProps) {
     })
 
     console.log({date})
+    return date
+  }
   
 
   return (
