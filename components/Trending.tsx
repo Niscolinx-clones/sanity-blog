@@ -1,11 +1,10 @@
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React from 'react'
 import TrendingSvg from '../assets/svgs/trending.svg'
 import { urlFor } from '../sanity'
 import { PostProps } from '../typings'
 
 function Trending({ posts }: PostProps) {
-  const [getDate, setGetDate] = useState<string>()
 
   const date = new Date()
 
