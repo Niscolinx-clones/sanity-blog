@@ -1,4 +1,3 @@
-import { create } from 'domain'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import TrendingSvg from '../assets/svgs/trending.svg'
