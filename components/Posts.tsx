@@ -6,9 +6,12 @@ interface Props {
 }
 
 
-const Posts: NextPage = (props: Props) => {
-console.log(post)
+const Posts: NextPage<Props> = ({posts}) => {
+console.log(posts)
 
+return <div>
+
+</div>
 }
 
 export default Posts
