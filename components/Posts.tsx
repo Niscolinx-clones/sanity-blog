@@ -3,7 +3,6 @@ import { urlFor } from '../sanity'
 import { PostProps } from '../typings'
 
 export default function Posts({ posts }: PostProps) {
-  console.log(posts)
 
   return (
     <div>
