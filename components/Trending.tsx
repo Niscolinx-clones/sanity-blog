@@ -15,7 +15,9 @@ function Trending({ posts }: PostProps) {
     month: 'short',
   })
 
- 
+  const createdAt = [...posts]
+
+  console.log({ posts })
 
   return (
     <div className="col-end-18 col-start-2 mt-10 grid">
