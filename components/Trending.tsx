@@ -11,21 +11,19 @@ function Trending({ posts }: PostProps) {
         <TrendingSvg />
         <p className="ml-2 text-xs font-bold uppercase">Trending on Medium</p>
       </header>
-      <div className="">
-        {posts.map((post) => {
-          return (
-            <>
-              <span></span>
-              <Link href={`/posts/${post.slug.current}`} key={post._id}>
-                <>
-                  <p>{post.title}</p>
-                  <img src={urlFor(post.author.image).url()} alt="" />
-                </>
-              </Link>
-            </>
-          )
-        })}
-      </div>
+      {posts.map((post) => {
+        return (
+          <div>
+            <span></span>
+            <Link href={`/posts/${post.slug.current}`} key={post._id}>
+              <>
+                <p>{post.title}</p>
+                <img src={urlFor(post.author.image).url()} alt="" />
+              </>
+            </Link>
+          </div>
+        )
+      })}
     </div>
   )
 }
