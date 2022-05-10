@@ -8,7 +8,7 @@ import { PostProps } from '../typings'
 function Trending({ posts }: PostProps) {
   const [fetchedPosts, setFetchedPosts] = useState()
 
-  const formatDate = (dateToFormat: string): any => {
+  const formatDate = (dateToFormat: string): string => {
 
     const date = new Date(dateToFormat)
 
@@ -17,13 +17,10 @@ function Trending({ posts }: PostProps) {
       month: 'short',
     })
 
-    console.log({updatedDate})
     return updatedDate
   }
 
-  console.log('posts', posts)
   posts.map((post) => {
-    console.log({post})
     const updatedPost = {...post}
     updatedPost._createdAt = formatDate(updatedPost._createdAt)
 
