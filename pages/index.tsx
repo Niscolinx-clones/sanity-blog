@@ -4,14 +4,10 @@ import Header from '../components/Header'
 import Posts from '../components/Posts'
 import Trending from '../components/Trending'
 import { sanityClient } from '../sanity'
-import { Post } from '../typings'
+import { Post, PostProps } from '../typings'
 
-interface Props {
-  posts: [Post]
-}
 
-const Home: NextPage<Props> = ({posts}) => {
-  console.log(posts)
+const Home: NextPage<PostProps> = ({posts}) => {
   return (
     <div className="grid-cols-18  mx-auto grid w-full max-w-7xl">
       <Head>
