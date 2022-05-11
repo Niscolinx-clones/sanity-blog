@@ -7,7 +7,7 @@ import { Post, PostProps } from '../typings'
 function Trending({ posts }: PostProps) {
   const [fetchedPosts, setFetchedPosts] = useState<Post[]>()
 
-  const formatDate = (dateToFormat: string): string => {
+  const formatDate = (dateToFormat: string) => {
 
     const date = new Date(dateToFormat)
 
