@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import TrendingSvg from '../assets/svgs/trending.svg'
 import { urlFor } from '../sanity'
 import { Post, PostProps } from '../typings'
@@ -8,7 +8,6 @@ function Trending({ posts }: PostProps) {
   const [fetchedPosts, setFetchedPosts] = useState<Post[]>()
 
   const formatDate = (dateToFormat: string) => {
-
     const date = new Date(dateToFormat)
 
     const updatedDate = date.toLocaleString('en-US', {
@@ -20,19 +19,16 @@ function Trending({ posts }: PostProps) {
   }
 
   useEffect(() => {
-
     let tempPosts: Post[] = []
     posts.map((post) => {
-      const updatedPost = {...post}
+      const updatedPost = { ...post }
       updatedPost._createdAt = formatDate(updatedPost._createdAt)
 
       tempPosts.push(updatedPost)
     })
 
     setFetchedPosts(tempPosts)
-    
   }, [])
-
 
   return (
     <div className="col-end-18 col-start-2 mt-10 grid">
@@ -40,26 +36,28 @@ function Trending({ posts }: PostProps) {
         <TrendingSvg />
         <p className="ml-2 text-xs font-bold uppercase">Trending on Medium</p>
       </header>
-      {fetchedPosts && fetchedPosts.map((post: Post) => {
-        return (
-          <div key={post._id}>
-            <span>01</span>
-            <Link href={`/posts/${post.slug.current}`}>
-              <>
-                <img
-                  src={urlFor(post.author.image).url()}
-                  alt="author picture"
-                  className="w-12 h-12"
-                />
-                <h3>{post.author.name}</h3>
-                <p>{post.title}</p>
-              </>
-            </Link>
-            <p>{post._createdAt}</p>
-            
-          </div>
-        )
-      })}
+      {fetchedPosts &&
+        fetchedPosts.map((post: Post) => {
+          return (
+            <div key={post._id} className='flex'>
+              <span>01</span>
+              <div>
+                <Link href={`/posts/${post.slug.current}`}>
+                  <>
+                    <img
+                      src={urlFor(post.author.image).url()}
+                      alt="author picture"
+                      className="h-12 w-12"
+                    />
+                    <h3>{post.author.name}</h3>
+                    <p>{post.title}</p>
+                  </>
+                </Link>
+                <p>{post._createdAt}</p>
+              </div>
+            </div>
+          )
+        })}
     </div>
   )
 }
