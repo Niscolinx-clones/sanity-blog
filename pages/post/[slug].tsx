@@ -6,9 +6,19 @@ export default function Post() {
 }
 
 export const getStaticPaths = async () => {
-  const query = 
-    await sanityClient.fetch(`*[_type == "post" && slug.current == $slug][0]{
+  const query = `*[_type == "post" && slug.current == $slug][0]{
       _id,
     slug
-  }`)
+  }`
+    await sanityClient.fetch(query)
+
+  console.log(query)
+
+  return {
+      params: query
+  }
+}
+
+export const getStaticProps = async (props: any) => {
+console.log(props)
 }
