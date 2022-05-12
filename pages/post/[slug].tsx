@@ -1,4 +1,4 @@
-import { GetStaticProps } from 'next'
+import { GetStaticPaths, GetStaticProps } from 'next'
 import React from 'react'
 import { sanityClient } from '../../sanity'
 import { Post } from '../../typings'
@@ -7,7 +7,7 @@ export default function Post() {
   return <div>[slug]</div>
 }
 
-export const getStaticPaths = async () => {
+export const getStaticPaths:GetStaticPaths = async () => {
   const query = `*[_type == "post"]{
       _id,
     slug {
@@ -31,7 +31,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps:GetStaticProps = async (props) => {
   
-    const query = `*[_type == "post" && slug.current == 'third-post'][0]{
+    const query = `*[_type == "post" && slug.current == $slug][0]{
       _id,
   _createdAt,
   title,
@@ -51,5 +51,7 @@ mainImage,
 
   }`
 
-  const post = await sanityClient.fetch(query)
+  const post = await sanityClient.fetch(query, {
+
+  })
 }
