@@ -24,6 +24,13 @@ export default {
       },
     },
     {
+      name: 'readTime',
+      title: 'Read Time',
+      type: 'number',
+      description: 'Average time to read this article in minutes'
+     
+    },
+    {
       name: 'author',
       title: 'Author',
       type: 'reference',
