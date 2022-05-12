@@ -10,7 +10,7 @@ export const getStaticPaths = async () => {
       _id,
     slug
   }`
-    await sanityClient.fetch(query)
+   const posts =  await sanityClient.fetch(query)
 
   console.log(query)
 
