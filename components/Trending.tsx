@@ -41,21 +41,21 @@ function Trending({ posts }: PostProps) {
           fetchedPosts.map((post: Post, index) => {
             return (
               <div key={post._id} className="flex w-full gap-5">
-                <span className="text-[#e6e6e6]">
+                <span className="text-[#e6e6e6] font-bold text-[1.7rem]">
                   {index + 1 < 10 ? '0' + (index + 1) : index}
                 </span>
-                <div>
+                <div className='grid gap-2'>
                   <Link href={`/posts/${post.slug.current}`}>
                     <>
-                      <div className="flex">
+                      <div className="flex gap-3">
                         <img
                           src={urlFor(post.author.image).url()}
                           alt="author picture"
                           className="h-8 w-8 rounded-full object-cover"
                         />
-                        <h3>{post.author.name}</h3>
+                        <h3 className='font-medium'>{post.author.name}</h3>
                       </div>
-                      <p>{post.title}</p>
+                      <p className=''>{post.title}</p>
                     </>
                   </Link>
                   <p className="text-[#757575]">
