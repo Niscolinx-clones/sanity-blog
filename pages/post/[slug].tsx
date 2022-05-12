@@ -54,4 +54,16 @@ mainImage,
   const post = await sanityClient.fetch(query, {
     slug: params?.slug
   })
+
+  if(!post){
+      return {
+          notFound: true
+      }
+  }
+
+  return {
+      props: {
+          post
+      }
+  }
 }
