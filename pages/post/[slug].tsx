@@ -29,7 +29,7 @@ export const getStaticPaths:GetStaticPaths = async () => {
   }
 }
 
-export const getStaticProps:GetStaticProps = async (props) => {
+export const getStaticProps:GetStaticProps = async ({params}) => {
   
     const query = `*[_type == "post" && slug.current == $slug][0]{
       _id,
@@ -52,6 +52,6 @@ mainImage,
   }`
 
   const post = await sanityClient.fetch(query, {
-
+    slug: params?.slug
   })
 }
