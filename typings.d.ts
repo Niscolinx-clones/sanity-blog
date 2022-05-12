@@ -6,6 +6,7 @@ export interface Post {
     name: string
     image: string
   }
+  readTime: number
   description: string
   mainImage: {
     asset: {
