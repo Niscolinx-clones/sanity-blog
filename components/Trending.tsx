@@ -34,13 +34,13 @@ function Trending({ posts }: PostProps) {
     <div className="col-end-18 col-start-2 mt-10 grid">
       <header className="mb-3 flex items-center">
         <TrendingSvg />
-        <p className="ml-2 text-xs font-bold uppercase">Trending on Medium</p>
+        <p className="ml-2 text-sm font-bold uppercase">Trending on Medium</p>
       </header>
       {fetchedPosts &&
-        fetchedPosts.map((post: Post) => {
+        fetchedPosts.map((post: Post, index) => {
           return (
             <div key={post._id} className='flex'>
-              <span>01</span>
+              <span>{index + 1 < 10 ? '0' + (index + 1) : index}</span>
               <div>
                 <Link href={`/posts/${post.slug.current}`}>
                   <>
