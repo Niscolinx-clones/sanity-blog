@@ -3,8 +3,8 @@ import React from 'react'
 import { sanityClient } from '../../sanity'
 import { Post } from '../../typings'
 
-export default function Post() {
-  return <div>[slug]</div>
+export default function Slug() {
+  return <div>Slug</div>
 }
 
 export const getStaticPaths:GetStaticPaths = async () => {
@@ -19,7 +19,7 @@ export const getStaticPaths:GetStaticPaths = async () => {
   console.log(query)
   const paths = posts.map((post: Post) => ({
     params: {
-      slug: posts.slug.current,
+      slug: post.slug.current,
     },
   }))
 
