@@ -56,7 +56,7 @@ function Trending({ posts }: PostProps) {
                       <p>{post.title}</p>
                     </>
                   </Link>
-                  <p>{post._createdAt}</p>
+                  <p>{post._createdAt} . <span>{post.readTime}</span> min read</p>
                 </div>
               </div>
             )
