@@ -47,7 +47,7 @@ function Trending({ posts }: PostProps) {
                     <img
                       src={urlFor(post.author.image).url()}
                       alt="author picture"
-                      className="h-12 w-12"
+                      className="w-8 h-8 object-cover rounded-full"
                     />
                     <h3>{post.author.name}</h3>
                     <p>{post.title}</p>
