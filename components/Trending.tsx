@@ -39,7 +39,7 @@ function Trending({ posts }: PostProps) {
       {fetchedPosts &&
         fetchedPosts.map((post: Post, index) => {
           return (
-            <div key={post._id} className='flex'>
+            <div key={post._id} className='flex gap-5'>
               <span>{index + 1 < 10 ? '0' + (index + 1) : index}</span>
               <div>
                 <Link href={`/posts/${post.slug.current}`}>
