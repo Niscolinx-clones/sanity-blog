@@ -36,7 +36,7 @@ function Trending({ posts }: PostProps) {
         <TrendingSvg />
         <p className="ml-2 text-sm font-bold uppercase">Trending on Medium</p>
       </header>
-      <div className='grid gap-8'>
+      <div className='grid gap-8 grid-cols-tc'>
         {fetchedPosts &&
           fetchedPosts.map((post: Post, index) => {
             return (

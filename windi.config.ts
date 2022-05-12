@@ -8,7 +8,7 @@ export default defineConfig({
   theme: {
     extend: {
       gridTemplateColumns: {
-        tc: 'repeat(auto-fit, minmax(20rem, 1fr))'
+        tc: 'repeat(auto-fit, minmax(18rem, 1fr))'
       },
     },
   },
