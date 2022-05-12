@@ -32,7 +32,7 @@ function Trending({ posts }: PostProps) {
 
   return (
     <div className="col-end-18 col-start-2 mt-10 grid">
-      <header className="mb-3 flex items-center">
+      <header className="mb-5 flex items-center">
         <TrendingSvg />
         <p className="ml-2 text-sm font-bold uppercase">Trending on Medium</p>
       </header>
@@ -41,22 +41,22 @@ function Trending({ posts }: PostProps) {
           fetchedPosts.map((post: Post, index) => {
             return (
               <div key={post._id} className="flex w-full gap-5">
-                <span className="text-[#e6e6e6] font-bold text-[1.7rem]">
+                <span className="text-[1.7rem] font-bold text-[#e6e6e6]">
                   {index + 1 < 10 ? '0' + (index + 1) : index}
                 </span>
-                <div className='grid gap-2'>
+                <div className="grid gap-2 ">
                   <Link href={`/posts/${post.slug.current}`}>
-                    <>
+                    <div className="cursor-pointer contents">
                       <div className="flex gap-3">
                         <img
                           src={urlFor(post.author.image).url()}
                           alt="author picture"
-                          className="h-8 w-8 rounded-full object-cover"
+                          className="h-6 w-6 rounded-full object-cover"
                         />
-                        <h3 className='font-medium'>{post.author.name}</h3>
+                        <h3 className="font-medium">{post.author.name}</h3>
                       </div>
-                      <p className=''>{post.title}</p>
-                    </>
+                      <p className="text-lg font-bold">{post.title}</p>
+                    </div>
                   </Link>
                   <p className="text-[#757575]">
                     {post._createdAt} . <span>{post.readTime}</span> min read
