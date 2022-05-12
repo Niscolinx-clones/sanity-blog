@@ -36,10 +36,12 @@ function Trending({ posts }: PostProps) {
         <TrendingSvg />
         <p className="ml-2 text-sm font-bold uppercase">Trending on Medium</p>
       </header>
+      <div>
+
       {fetchedPosts &&
         fetchedPosts.map((post: Post, index) => {
           return (
-            <div key={post._id} className='flex gap-5'>
+            <div key={post._id} className='flex gap-5 w-full'>
               <span>{index + 1 < 10 ? '0' + (index + 1) : index}</span>
               <div>
                 <Link href={`/posts/${post.slug.current}`}>
@@ -48,7 +50,7 @@ function Trending({ posts }: PostProps) {
                       src={urlFor(post.author.image).url()}
                       alt="author picture"
                       className="w-8 h-8 object-cover rounded-full"
-                    />
+                      />
                     <h3>{post.author.name}</h3>
                     <p>{post.title}</p>
                   </>
@@ -58,6 +60,7 @@ function Trending({ posts }: PostProps) {
             </div>
           )
         })}
+        </div>
     </div>
   )
 }
