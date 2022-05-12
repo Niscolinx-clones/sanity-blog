@@ -44,16 +44,16 @@ function Trending({ posts }: PostProps) {
                 <span className="text-[1.7rem] font-bold text-[#e6e6e6]">
                   {index + 1 < 10 ? '0' + (index + 1) : index}
                 </span>
-                <div className="grid gap-2 ">
+                <div className="grid gap-1">
                   <Link href={`/posts/${post.slug.current}`}>
                     <div className="cursor-pointer contents">
-                      <div className="flex gap-3">
+                      <div className="flex gap-2">
                         <img
                           src={urlFor(post.author.image).url()}
                           alt="author picture"
                           className="h-6 w-6 rounded-full object-cover"
                         />
-                        <h3 className="font-medium">{post.author.name}</h3>
+                        <h3 className="font-medium text-sm">{post.author.name}</h3>
                       </div>
                       <p className="text-lg font-bold">{post.title}</p>
                     </div>
