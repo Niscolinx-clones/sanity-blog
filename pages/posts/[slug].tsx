@@ -3,8 +3,9 @@ import React from 'react'
 import { sanityClient } from '../../sanity'
 import { Post } from '../../typings'
 
-export default function Slug() {
-  return <div>Slug</div>
+export default function Slug({post}: {post:Post}) {
+  console.log(post.title)
+  return <div>{post.title}</div>
 }
 
 export const getStaticPaths:GetStaticPaths = async () => {
@@ -16,13 +17,14 @@ export const getStaticPaths:GetStaticPaths = async () => {
   }`
   const posts = await sanityClient.fetch(query)
 
-  console.log(query)
+  console.log('posts', posts)
   const paths = posts.map((post: Post) => ({
     params: {
       slug: post.slug.current,
     },
   }))
 
+  console.log({paths})
   return {
     paths,
     fallback: 'blocking'
@@ -30,6 +32,7 @@ export const getStaticPaths:GetStaticPaths = async () => {
 }
 
 export const getStaticProps:GetStaticProps = async ({params}) => {
+  console.log('params', params)
   
     const query = `*[_type == "post" && slug.current == $slug][0]{
       _id,
