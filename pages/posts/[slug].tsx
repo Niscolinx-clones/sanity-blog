@@ -1,15 +1,14 @@
-import { GetServerSideProps, GetStaticPaths, GetStaticProps } from 'next'
+import { GetServerSideProps, GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { useRouter } from 'next/router'
 import React from 'react'
 import { sanityClient } from '../../sanity'
-import { Post } from '../../typings'
+import { Post, PostProps } from '../../typings'
 
- const Slug = () => {
+ export default function Slug({post}: {post: Post}){
 
-  return <div></div>
+  return <div>{post.title}</div>
 }
 
-export default Slug
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const query = `*[_type == "post"]{

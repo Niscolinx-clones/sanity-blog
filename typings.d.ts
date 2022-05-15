@@ -21,4 +21,5 @@ export interface Post {
 
 export interface PostProps {
   posts: [Post]
+  post?: Post
 }
