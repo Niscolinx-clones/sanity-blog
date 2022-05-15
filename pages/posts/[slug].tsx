@@ -4,10 +4,12 @@ import React from 'react'
 import { sanityClient } from '../../sanity'
 import { Post } from '../../typings'
 
-export default function Slug(props: any) {
+ const Slug = () => {
 
   return <div></div>
 }
+
+export default Slug
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const query = `*[_type == "post"]{
