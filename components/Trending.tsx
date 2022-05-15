@@ -36,7 +36,7 @@ function Trending({ posts }: PostProps) {
         <TrendingSvg />
         <p className="ml-2 text-sm font-bold uppercase">Trending on Medium</p>
       </header>
-      <div className='grid gap-8 grid-cols-tc'>
+      <div className="grid-cols-tc grid gap-8">
         {fetchedPosts &&
           fetchedPosts.map((post: Post, index) => {
             return (
@@ -51,8 +51,8 @@ function Trending({ posts }: PostProps) {
                       query: { slug: `${post.slug.current}` },
                     }}
                   >
-                    Secondary Link of {post.title}
-                    </Link>{' '}
+                    <p>Secondary Link of {post.title}</p>
+                  </Link>{' '}
                   <Link href={`/posts/${post.slug.current}`}>
                     <div className="contents cursor-pointer">
                       <div className="flex gap-2">
