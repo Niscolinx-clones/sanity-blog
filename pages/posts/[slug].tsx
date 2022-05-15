@@ -4,9 +4,9 @@ import React from 'react'
 import { sanityClient } from '../../sanity'
 import { Post } from '../../typings'
 
-export default function Slug(props: any) {
+export default function Slug({post}: {post: Post}) {
 
-  return <div></div>
+  return <div>{post.title}</div>
 }
 
 // export const getStaticPaths: GetStaticPaths = async () => {
@@ -50,7 +50,6 @@ export default function Slug(props: any) {
 // 'comments': *[
 //   _type == "comment" && post._ref == ^._id && approved == true]
 
-
 //   }`
 
 //   const post = await sanityClient.fetch(query, {
@@ -70,28 +69,41 @@ export default function Slug(props: any) {
 //   }
 // }
 
-export const getServerSideProps:GetServerSideProps = async(props) => {
-console.log('props for server', props)
- 
- const query = `*[_type == "post"]{
-      _id,
-      _createdAt,
-      title,
-      readTime,
-     author -> {
-        name,
-        image
-      },
-    description,
-    mainImage,
-    slug
-  }`
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+  console.log('props for server', params?.slug)
 
- const posts = await sanityClient.fetch(query)
+  const query = `*[_type == "post" && slug.current == $slug][0]{
+        _id,
+    _createdAt,
+    title,
+    body,
+      slug {
+    current
+  },
+  description,
+  author -> {
+    name,
+    image
+  },
+  mainImage,
+  'comments': *[
+    _type == "comment" && post._ref == ^._id && approved == true]
 
- return {
-   props: {
-     posts,
-   },
- }
+    }`
+
+  const post = await sanityClient.fetch(query, {
+    slug: params?.slug,
+  })
+
+  if (!post) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {
+      post,
+    },
+  }
 }
