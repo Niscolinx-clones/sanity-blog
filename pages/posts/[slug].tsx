@@ -5,8 +5,7 @@ import { sanityClient } from '../../sanity'
 import { Post } from '../../typings'
 
 export default function Slug(props: any) {
-  const router = useRouter()
-  console.log(router)
+
   return <div></div>
 }
 
@@ -71,9 +70,28 @@ export default function Slug(props: any) {
 //   }
 // }
 
-export const getServerSideProps:GetServerSideProps = async() => {
+export const getServerSideProps:GetServerSideProps = async(props) => {
+console.log('props for server', props)
+ 
+ const query = `*[_type == "post"]{
+      _id,
+      _createdAt,
+      title,
+      readTime,
+     author -> {
+        name,
+        image
+      },
+    description,
+    mainImage,
+    slug
+  }`
 
-  return {
-    props: 'hello'
-  }
+ const posts = await sanityClient.fetch(query)
+
+ return {
+   props: {
+     posts,
+   },
+ }
 }
