@@ -45,14 +45,7 @@ function Trending({ posts }: PostProps) {
                   {index + 1 < 10 ? '0' + (index + 1) : index}
                 </span>
                 <div className="grid gap-1">
-                  <Link
-                    href={{
-                      pathname: `/posts/${post.slug.current}`,
-                      query: { slug: `${post.slug.current}` },
-                    }}
-                  >
-                    <p>Secondary Link of {post.title}</p>
-                  </Link>{' '}
+                 
                   <Link href={`/posts/${post.slug.current}`}>
                     <div className="contents cursor-pointer">
                       <div className="flex gap-2">
