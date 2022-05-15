@@ -70,8 +70,9 @@ export default function Slug(props: any) {
 //   }
 // }
 
-export const getServerSideProps:GetServerSideProps = async(props) => {
-console.log('props for server', props)
+export const getServerSideProps:GetServerSideProps = async({req, res}) => {
+console.log('req for server', req)
+console.log('res for server', res)
  
  const query = `*[_type == "post"]{
       _id,
