@@ -67,6 +67,7 @@ mainImage,
     props: {
       post,
     },
+    revalidate: 60
   }
 }
 
