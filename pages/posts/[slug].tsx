@@ -1,5 +1,4 @@
-import { GetServerSideProps, GetStaticPaths, GetStaticProps, NextPage } from 'next'
-import { useRouter } from 'next/router'
+import {  GetStaticPaths, GetStaticProps } from 'next'
 import React from 'react'
 import { sanityClient } from '../../sanity'
 import { Post, PostProps } from '../../typings'
