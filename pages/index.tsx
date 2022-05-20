@@ -6,18 +6,18 @@ import Trending from '../components/Trending'
 import { sanityClient } from '../sanity'
 import { PostProps } from '../typings'
 
-
-const Home: NextPage<PostProps> = ({posts}) => {
+const Home: NextPage<PostProps> = ({ posts }) => {
   return (
-    <div className="grid-cols-18  mx-auto grid w-full max-w-7xl">
+    <>
       <Head>
         <title>Medium Blog Clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
       <Trending posts={posts} />
+      <Trending posts={posts} />
       {/* <Posts posts={posts} /> */}
-    </div>
+    </>
   )
 }
 
@@ -46,5 +46,3 @@ export const getServerSideProps = async () => {
     },
   }
 }
-
-
