@@ -1,11 +1,26 @@
 import {  GetStaticPaths, GetStaticProps } from 'next'
 import React from 'react'
-import { sanityClient } from '../../sanity'
+import { sanityClient, urlFor } from '../../sanity'
 import { Post, PostProps } from '../../typings'
 
  export default function Slug({post}: {post: Post}){
 
-  return <div>{post.title}</div>
+  return (
+    <div>
+      {' '}
+      <div className="contents cursor-pointer">
+        <div className="flex gap-2">
+          <img
+            src={urlFor(post.author.image).url()}
+            alt="author picture"
+            className="h-6 w-6 rounded-full object-cover"
+          />
+          <h3 className="text-sm font-medium">{post.author.name}</h3>
+        </div>
+        <p className="text-lg font-bold">{post.title}</p>
+      </div>
+    </div>
+  )
 }
 
 
