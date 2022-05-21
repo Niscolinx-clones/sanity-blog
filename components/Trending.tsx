@@ -30,6 +30,9 @@ function Trending({ posts }: PostProps) {
     setFetchedPosts(tempPosts)
   }, [])
 
+  const displayIndex = (index:number) => {
+    
+  }
   return (
     <div className="col-end-18 col-start-2 mt-10 grid">
       <header className="mb-5 flex items-center">
@@ -42,7 +45,7 @@ function Trending({ posts }: PostProps) {
             return (
               <div key={post._id} className="flex w-full gap-5">
                 <span className="text-[1.7rem] font-bold text-[#e6e6e6]">
-                  {index + 1 < 10 ? '0' + (index + 1) : index}
+                  {displayIndex(index)}
                 </span>
                 <div className="grid gap-1">
                  
