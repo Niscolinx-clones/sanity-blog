@@ -32,6 +32,7 @@ export const getServerSideProps = async () => {
 }
 
 const Home: NextPage<PostProps> = ({ posts }) => {
+  console.log({posts})
   return (
     <>
       <Head>
