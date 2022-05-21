@@ -45,16 +45,16 @@ export default {
       },
     },
     {
-      name: 'categories',
-      title: 'Categories',
+      name: 'category',
+      title: 'Category',
       type: 'array',
       of: [{type: 'reference', to: {type: 'category'}}],
     },
     {
-      name: 'groupCategories',
-      title: 'Group Categories',
+      name: 'groupCategory',
+      title: 'Group Category',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'groupCategories'}}],
+      of: [{type: 'reference', to: {type: 'groupCategory'}}],
     },
     {
       name: 'publishedAt',
