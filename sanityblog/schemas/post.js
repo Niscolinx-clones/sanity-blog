@@ -51,6 +51,12 @@ export default {
       of: [{type: 'reference', to: {type: 'category'}}],
     },
     {
+      name: 'groupCategories',
+      title: 'Group Categories',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'groupCategories'}}],
+    },
+    {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
