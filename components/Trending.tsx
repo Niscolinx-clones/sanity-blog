@@ -32,13 +32,12 @@ function Trending({ posts }: PostProps) {
 
   const displayIndex = (index:number) => {
     
-    if(index < 10){
+    if(index < 10 ){
+      console.log('index 1', index)
       return "0" + (index + 1)
     }
+   
     
-    else {
-      return index
-    }
 
   }
   return (
