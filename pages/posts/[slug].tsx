@@ -1,7 +1,7 @@
 import {  GetStaticPaths, GetStaticProps } from 'next'
 import React from 'react'
 import { sanityClient, urlFor } from '../../sanity'
-import { Post, PostProps } from '../../typings'
+import { Post } from '../../typings'
 
  export default function Slug({post}: {post: Post}){
 

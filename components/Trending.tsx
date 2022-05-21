@@ -32,10 +32,14 @@ function Trending({ posts }: PostProps) {
 
   const displayIndex = (index:number) => {
     
-    if(index + 1 < 10){
+    if(index < 10){
       return "0" + (index + 1)
     }
     
+    else {
+      return index
+    }
+
   }
   return (
     <div className="col-end-18 col-start-2 mt-10 grid">
