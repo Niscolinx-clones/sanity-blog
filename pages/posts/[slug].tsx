@@ -7,7 +7,6 @@ import { Post } from '../../typings'
 
   return (
     <div>
-      {' '}
       <div className="contents cursor-pointer">
         <div className="flex gap-2">
           <img
@@ -81,7 +80,7 @@ mainImage,
     props: {
       post,
     },
-    revalidate: 60
+    revalidate: 20
   }
 }
 
