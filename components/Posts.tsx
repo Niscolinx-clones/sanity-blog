@@ -4,7 +4,7 @@ import { PostProps } from '../typings'
 import BookMarkSvg from '../assets/svgs/bookmark.svg'
 
 export default function Posts({ posts }: PostProps) {
-  console.log({posts})
+  console.log({ posts })
   return (
     <div className="">
       {posts.map((post) => {
@@ -23,13 +23,16 @@ export default function Posts({ posts }: PostProps) {
                 <p className="text-lg font-bold">{post.title}</p>
               </div>
             </Link>
-            <p className="flex text-[#757575]">
-              {new Date(post.publishedAt).toLocaleString('en-US', {
-                day: '2-digit',
-                month: 'short',
-              })}{' '}
-              . <span>{post.readTime}</span> min read
-            </p>
+            <div className="flex">
+              <p className="text-[#757575]">
+                {new Date(post.publishedAt).toLocaleString('en-US', {
+                  day: '2-digit',
+                  month: 'short',
+                })}{' '}
+                . <span>{post.readTime}</span> min read
+              </p>
+              <BookMarkSvg />
+            </div>
           </div>
         )
       })}
