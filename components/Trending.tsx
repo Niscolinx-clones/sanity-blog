@@ -73,6 +73,7 @@ function Trending({ trending }: TrendingProps) {
             )
           })}
       </div>
+      <hr />
     </div>
   )
 }
