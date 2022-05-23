@@ -8,7 +8,6 @@ export default function Posts({ posts }: PostProps) {
       {posts.map((post) => {
         return (
           <div className="grid gap-1">
-            <Link href={`${post._id}`}>More details</Link>
             <Link href={`/post/${post.slug.current}`}>
               <div className="contents cursor-pointer">
                 <div className="flex gap-2">
