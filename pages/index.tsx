@@ -6,7 +6,6 @@ import Trending from '../components/Trending'
 import { sanityClient } from '../sanity'
 import { IndexProps } from '../typings'
 
-
 export const getServerSideProps = async () => {
   const post_query = `*[_type == "post"]{
       _id,
@@ -49,13 +48,13 @@ title
     props: {
       posts,
       trending,
-      categoryQuery
+      categoryQuery,
     },
   }
 }
 
-const Home: NextPage<IndexProps> = ({trending, posts, categoryQuery}) => {
-  console.log({categoryQuery})
+const Home: NextPage<IndexProps> = ({ trending, posts, categoryQuery }) => {
+  console.log({ categoryQuery })
   return (
     <>
       <Head>
@@ -65,13 +64,15 @@ const Home: NextPage<IndexProps> = ({trending, posts, categoryQuery}) => {
       <Header />
       <Trending trending={trending} />
       <div className="col-end-18 col-start-2 mt-10 grid">
-        <Posts posts={posts} />
-        <div>
-          <h3>DISCOVER MORE OF WHAT MATTERS TO YOU</h3>
+        <div className="grid grid-cols-3">
+          <Posts posts={posts} />
+          <div>
+            <h3>DISCOVER MORE OF WHAT MATTERS TO YOU</h3>
 
-          {categoryQuery.map((category, i) => {
-            return <li key={i}>{category.title}</li>
-          })}
+            {categoryQuery.map((category, i) => {
+              return <li key={i}>{category.title}</li>
+            })}
+          </div>
         </div>
       </div>
     </>
@@ -79,4 +80,3 @@ const Home: NextPage<IndexProps> = ({trending, posts, categoryQuery}) => {
 }
 
 export default Home
-
