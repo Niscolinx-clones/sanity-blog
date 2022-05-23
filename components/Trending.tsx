@@ -22,7 +22,7 @@ function Trending({ trending }: TrendingProps) {
     let tempPosts: Post[] = []
     trending.map((post) => {
       const updatedPost = { ...post }
-      updatedPost._createdAt = formatDate(updatedPost._createdAt)
+      updatedPost.publishedAt = formatDate(updatedPost.publishedAt)
 
       tempPosts.push(updatedPost)
     })
