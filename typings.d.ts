@@ -29,6 +29,14 @@ export interface TrendingProps {
   trending: [Post]
 }
 
+export interface categoryQuery {
+  categoryQuery: [
+    {
+      title: string
+    }
+  ]
+}
+
 export interface IndexProps {
   posts: [Post]
   trending: [Post]

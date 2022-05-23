@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Categories from '../components/categories'
 import Header from '../components/Header'
 import Posts from '../components/Posts'
 import Trending from '../components/Trending'
@@ -54,7 +55,6 @@ title
 }
 
 const Home: NextPage<IndexProps> = ({ trending, posts, categoryQuery }) => {
-  console.log({ categoryQuery })
   return (
     <>
       <Head>
@@ -66,13 +66,7 @@ const Home: NextPage<IndexProps> = ({ trending, posts, categoryQuery }) => {
       <div className="col-end-18 col-start-2 mt-10 grid ">
         <div className="grid grid-cols-[2fr,1fr]">
           <Posts posts={posts} />
-          <div>
-            <h3>DISCOVER MORE OF WHAT MATTERS TO YOU</h3>
-
-            {categoryQuery.map((category, i) => {
-              return <li key={i}>{category.title}</li>
-            })}
-          </div>
+          <Categories categoryQuery={categoryQuery}/>
         </div>
       </div>
     </>
