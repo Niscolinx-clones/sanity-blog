@@ -8,7 +8,7 @@ function Categories({ categoryQuery }: categoryQuery) {
         Discover more of what matters to you
       </p>
 
-      <ul className="flex list-none justify-between flex-wrap gap-y-2">
+      <ul className="flex list-none justify-between flex-wrap gap-y-2 max-w-[20rem]">
         {categoryQuery.map((category, i) => {
           return (
             <li key={i} className="border p-2 flex text-xs text-gray-600">
