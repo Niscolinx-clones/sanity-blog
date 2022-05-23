@@ -1,11 +1,12 @@
 import { GetServerSideProps } from 'next';
 import React from 'react';
 import { sanityClient, urlFor } from '../sanity';
+import { Post } from '../typings';
 
 export const getServerSideProps:GetServerSideProps = async({query}) => {
 const {_id} =  query
 
-const makeQuery = ` *[_type == "post" && _id == ${_id}]{
+const makeQuery = `*[_type == "post" && _id == "${_id}"][0]{
     _id,
   _createdAt,
   title,
@@ -18,10 +19,7 @@ author -> {
   name,
   image
 },
-mainImage,
-'comments': *[
-  _type == "comment" && post._ref == ^._id && approved == true]
-
+mainImage
  }`
 
  const post = await sanityClient.fetch(makeQuery)
@@ -34,13 +32,15 @@ mainImage,
 
  return {
    props: {
-     post,
+     post
    },
  }
 
 }
 
-export default function Details() {
+export default function Details({post}: {post: Post}) {
+  
+  console.log({post})
   return (
     <div>
       <div className="contents cursor-pointer">
