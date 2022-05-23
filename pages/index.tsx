@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import Posts from '../components/Posts'
 import Trending from '../components/Trending'
 import { sanityClient } from '../sanity'
-import { PostProps, TrendingProps } from '../typings'
+import { IndexProps } from '../typings'
 
 
 export const getServerSideProps = async () => {
@@ -47,7 +47,7 @@ export const getServerSideProps = async () => {
   }
 }
 
-const Home: NextPage<TrendingProps> = ({ trending }) => {
+const Home: NextPage<IndexProps> = ({trending, posts}) => {
   return (
     <>
       <Head>
@@ -55,8 +55,8 @@ const Home: NextPage<TrendingProps> = ({ trending }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Trending trending={trending} />
-      {/* <Posts posts={posts} /> */}
+      <Trending trending={trending} /> 
+       <Posts posts={posts} />
     </>
   )
 }
