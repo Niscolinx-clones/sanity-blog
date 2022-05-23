@@ -11,7 +11,7 @@ function Categories({ categoryQuery }: categoryQuery) {
       <ul className="flex list-none justify-between flex-wrap gap-y-2">
         {categoryQuery.map((category, i) => {
           return (
-            <li key={i} className="border py-4 px-2 flex text-xs text-gray-600">
+            <li key={i} className="border p-2 flex text-xs text-gray-600">
               {category.title}
             </li>
           )
