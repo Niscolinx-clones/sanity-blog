@@ -2,9 +2,9 @@ import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import TrendingSvg from '../assets/svgs/trending.svg'
 import { urlFor } from '../sanity'
-import { Post, PostProps } from '../typings'
+import { Post, TrendingProps } from '../typings'
 
-function Trending({ posts }: PostProps) {
+function Trending({ trending }: TrendingProps) {
   const [fetchedPosts, setFetchedPosts] = useState<Post[]>()
 
   const formatDate = (dateToFormat: string) => {
@@ -20,7 +20,7 @@ function Trending({ posts }: PostProps) {
 
   useEffect(() => {
     let tempPosts: Post[] = []
-    posts.map((post) => {
+    trending.map((post) => {
       const updatedPost = { ...post }
       updatedPost._createdAt = formatDate(updatedPost._createdAt)
 
