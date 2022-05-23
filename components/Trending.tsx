@@ -44,12 +44,10 @@ function Trending({ trending }: TrendingProps) {
             return (
               <div key={post._id} className="flex w-full gap-5">
                 <span className="text-[1.7rem] font-bold text-[#e6e6e6]">
-                  {index < 9 ? "0" + (index + 1) : index + 1}
+                  {index < 9 ? '0' + (index + 1) : index + 1}
                 </span>
                 <div className="grid gap-1">
-                 <Link href={`${post._id}`}>
-                   More details
-                 </Link>
+                  <Link href={`${post._id}`}>More details</Link>
                   <Link href={`/post/${post.slug.current}`}>
                     <div className="contents cursor-pointer">
                       <div className="flex gap-2">
@@ -73,7 +71,7 @@ function Trending({ trending }: TrendingProps) {
             )
           })}
       </div>
-      <hr className='border-black'/>
+      <hr className=" border-[#e6e6e6] w-full my-10" />
     </div>
   )
 }
