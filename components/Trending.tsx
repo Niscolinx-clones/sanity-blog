@@ -71,7 +71,7 @@ function Trending({ trending }: TrendingProps) {
             )
           })}
       </div>
-      <hr className=" border-[#e6e6e6] w-full my-10" />
+      <hr className=" border-[#febf17] my-10 w-full" />
     </div>
   )
 }

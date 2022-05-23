@@ -64,7 +64,7 @@ const Home: NextPage<IndexProps> = ({ trending, posts, categoryQuery }) => {
       <Header />
       <Trending trending={trending} />
       <div className="col-end-18 col-start-2 mt-10 grid ">
-        <div className="grid grid-cols-[2fr,1fr]">
+        <div className="grid grid-cols-[1fr,30rem]">
           <Posts posts={posts} />
           <Categories categoryQuery={categoryQuery}/>
         </div>

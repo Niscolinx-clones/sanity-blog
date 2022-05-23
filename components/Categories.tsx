@@ -1,14 +1,22 @@
 import React from 'react'
 import { categoryQuery } from '../typings'
 
-function Categories({ categoryQuery}: categoryQuery) {
+function Categories({ categoryQuery }: categoryQuery) {
   return (
     <div>
-      <h3>DISCOVER MORE OF WHAT MATTERS TO YOU</h3>
+      <p className="text-xs font-bold uppercase">
+        Discover more of what matters to you
+      </p>
 
-      {categoryQuery.map((category, i) => {
-        return <li key={i}>{category.title}</li>
-      })}
+      <ul className="flex list-none justify-between flex-wrap gap-y-2">
+        {categoryQuery.map((category, i) => {
+          return (
+            <li key={i} className="border py-4 px-2 flex">
+              {category.title}
+            </li>
+          )
+        })}
+      </ul>
     </div>
   )
 }
