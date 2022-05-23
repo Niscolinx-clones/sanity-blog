@@ -21,5 +21,8 @@ export interface Post {
 
 export interface PostProps {
   posts: [Post]
-  trending?: [Post]
+}
+
+export interface TrendingProps {
+  trending: [Post]
 }

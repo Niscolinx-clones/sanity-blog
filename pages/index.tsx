@@ -56,7 +56,7 @@ const Home: NextPage<PostProps> = ({ posts, trending }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Trending posts={trending} />
+      <Trending trending={posts} />
       {/* <Posts posts={posts} /> */}
     </>
   )
