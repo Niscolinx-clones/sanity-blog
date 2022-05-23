@@ -73,7 +73,7 @@ function Trending({ trending }: TrendingProps) {
             )
           })}
       </div>
-      <hr />
+      <hr className='border-black'/>
     </div>
   )
 }
