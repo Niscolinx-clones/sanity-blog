@@ -48,7 +48,7 @@ export const getServerSideProps = async () => {
 }
 
 const Home: NextPage<TrendingProps> = ({ trending }) => {
-  console.log({posts})
+  console.log({trending})
   return (
     <>
       <Head>
