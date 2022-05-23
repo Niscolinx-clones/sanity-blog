@@ -5,7 +5,7 @@ import { PostProps } from '../typings'
 export default function Posts({ posts }: PostProps) {
 
   return (
-    <div>
+    <div className="col-end-18 col-start-2 mt-10 grid">
       {posts.map((post) => {
         return (
           <Link href={`/posts/${post.slug.current}`} key={post._id}>
