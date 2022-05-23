@@ -25,6 +25,7 @@ export const getServerSideProps = async () => {
   const trending_query = `*[_type == 'post' && groupCategory[0]._ref in *[_type == 'groupCategory' && title == 'Trending']._id][0...6]{
     _id,
       _createdAt,
+      publishedAt,
       title,
       readTime,
      author -> {

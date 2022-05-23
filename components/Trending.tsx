@@ -66,7 +66,7 @@ function Trending({ trending }: TrendingProps) {
                     </div>
                   </Link>
                   <p className="text-[#757575]">
-                    {post._createdAt} . <span>{post.readTime}</span> min read
+                    {post.publishedAt} . <span>{post.readTime}</span> min read
                   </p>
                 </div>
               </div>

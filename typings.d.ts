@@ -2,6 +2,7 @@ import { TrendingProps } from './typings.d';
 export interface Post {
   _id: string
   _createdAt: string
+  publishedAt: string
   title: string
   author: {
     name: string
