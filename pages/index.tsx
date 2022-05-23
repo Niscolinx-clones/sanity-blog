@@ -37,18 +37,24 @@ export const getServerSideProps = async () => {
     slug
     }`
 
+  const category_query = `*[_type == 'category']{
+title
+}`
+
   const posts = await sanityClient.fetch(post_query)
   const trending = await sanityClient.fetch(trending_query)
+  const categoryQuery = await sanityClient.fetch(category_query)
 
   return {
     props: {
       posts,
-      trending
+      trending,
+      categoryQuery
     },
   }
 }
 
-const Home: NextPage<IndexProps> = ({trending, posts}) => {
+const Home: NextPage<IndexProps> = ({trending, posts, categoryQuery}) => {
   return (
     <>
       <Head>
@@ -56,8 +62,13 @@ const Home: NextPage<IndexProps> = ({trending, posts}) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Trending trending={trending} /> 
-       <Posts posts={posts} />
+      <Trending trending={trending} />
+      <div className="col-end-18 col-start-2 mt-10 grid">
+        <Posts posts={posts} />
+        <div>
+          <h3>DISCOVER MORE OF WHAT MATTERS TO YOU</h3>
+        </div>
+      </div>
     </>
   )
 }

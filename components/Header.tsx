@@ -26,7 +26,7 @@ function Header() {
     <header className="grid-cols-18 header__height col-span-full grid">
       <div className="-z-1 absolute left-0 w-screen bg-[#febf17] border-b border-black" style={{height}}></div>
 
-      <div className="col-end-18 col-start-2 grid">
+      <div className="col-end-18 col-start-2 grid sticky">
         <div className="flex items-center justify-between py-5">
           <div>
             <Link href="/">
