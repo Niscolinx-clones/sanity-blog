@@ -11,6 +11,7 @@ export const getServerSideProps = async () => {
   const post_query = `*[_type == "post"]{
       _id,
       _createdAt,
+      publishedAt,
       title,
       readTime,
      author -> {

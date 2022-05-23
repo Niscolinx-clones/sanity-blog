@@ -4,6 +4,7 @@ import { PostProps } from '../typings'
 import BookMarkSvg from '../assets/svgs/bookmark.svg'
 
 export default function Posts({ posts }: PostProps) {
+  console.log({posts})
   return (
     <div className="">
       {posts.map((post) => {
