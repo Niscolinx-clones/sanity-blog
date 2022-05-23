@@ -1,4 +1,4 @@
-import { TrendingProps } from './typings.d';
+import { TrendingProps } from './typings.d'
 export interface Post {
   _id: string
   _createdAt: string
@@ -32,4 +32,9 @@ export interface TrendingProps {
 export interface IndexProps {
   posts: [Post]
   trending: [Post]
+  categoryQuery: [
+    {
+      title: string
+    }
+  ]
 }

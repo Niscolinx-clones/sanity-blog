@@ -55,6 +55,7 @@ title
 }
 
 const Home: NextPage<IndexProps> = ({trending, posts, categoryQuery}) => {
+  console.log({categoryQuery})
   return (
     <>
       <Head>
@@ -67,6 +68,10 @@ const Home: NextPage<IndexProps> = ({trending, posts, categoryQuery}) => {
         <Posts posts={posts} />
         <div>
           <h3>DISCOVER MORE OF WHAT MATTERS TO YOU</h3>
+
+          {categoryQuery.map((category, i) => {
+            return <li key={i}>{category.title}</li>
+          })}
         </div>
       </div>
     </>
