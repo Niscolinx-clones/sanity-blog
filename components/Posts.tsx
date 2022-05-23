@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { urlFor } from '../sanity'
 import { PostProps } from '../typings'
+import BookMarkSvg from '../assets/svgs/bookmark.svg'
 
 export default function Posts({ posts }: PostProps) {
   return (
@@ -21,8 +22,12 @@ export default function Posts({ posts }: PostProps) {
                 <p className="text-lg font-bold">{post.title}</p>
               </div>
             </Link>
-            <p className="text-[#757575]">
-              {post.publishedAt} . <span>{post.readTime}</span> min read
+            <p className="flex text-[#757575]">
+              {new Date(post.publishedAt).toLocaleString('en-US', {
+                day: '2-digit',
+                month: 'short',
+              })}{' '}
+              . <span>{post.readTime}</span> min read
             </p>
           </div>
         )
