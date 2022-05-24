@@ -20,7 +20,10 @@ export const getServerSideProps = async () => {
       },
     description,
     mainImage,
-    slug
+    slug,
+    categories[] -> {
+      title
+    }
   }`
 
   const trending_query = `*[_type == 'post' && groupCategory[0]._ref in *[_type == 'groupCategory' && title == 'Trending']._id][0...6]{
