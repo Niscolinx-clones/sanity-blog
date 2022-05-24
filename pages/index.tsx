@@ -21,7 +21,7 @@ export const getServerSideProps = async () => {
     description,
     mainImage,
     slug,
-    categories[] -> {
+    category[] -> {
       title
     }
   }`
@@ -39,7 +39,7 @@ export const getServerSideProps = async () => {
     description,
     mainImage,
     slug,
-     categories[] -> {
+     category[] -> {
       title
     }
   }`

@@ -29,7 +29,11 @@ export default function Posts({ posts }: PostProps) {
                   day: '2-digit',
                   month: 'short',
                 })}{' '}
-                . <span>{post.readTime}</span> min read
+                ܁ <span>{post.readTime}</span> min read ܁ <span>
+                  {post.category.map((categoryArr) => (
+                    
+                  ))}
+                </span>
               </p>
               <BookMarkSvg />
             </div>
