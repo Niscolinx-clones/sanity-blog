@@ -8,10 +8,7 @@ import { PortableText } from '@portabletext/react'
 export default function Posts({ posts }: PostProps) {
   const myPortableTextComponents = {
     types: {
-      image: ({ value }) => {
-        console.log({value})
-        return <img src='' alt=''/>
-      },
+      image: ({ value }) => <img src={urlFor(value).url()} />,
       callToAction: ({ value, isInline }) =>
         isInline ? (
           <a href={value.url}>{value.text}</a>
@@ -26,7 +23,7 @@ export default function Posts({ posts }: PostProps) {
           ? 'noreferrer noopener'
           : undefined
         return (
-          <a href={value.href} rel={rel}>
+          <a href={value.href} rel={rel} className='bg-blue-600'>
             {children}
           </a>
         )
