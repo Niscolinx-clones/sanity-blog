@@ -29,11 +29,9 @@ export default function Posts({ posts }: PostProps) {
                   day: '2-digit',
                   month: 'short',
                 })}{' '}
-                ܁ <span>{post.readTime}</span> min read ܁ <ul className='list-none flex-wrap'>
-                  {post.category.map((categoryArr, i) => (
-                    <li key={i} className='p-2 space-x-2'>{categoryArr.title}</li>
-                  ))}
-                </ul>
+                ܁ <span>{post.readTime}</span> min read ܁ <span>
+                  {post.category[0].title}
+                </span>
               </p>
               <BookMarkSvg />
             </div>
