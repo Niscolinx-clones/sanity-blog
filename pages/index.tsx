@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Categories from '../components/categories'
+import Categories from '../components/Categories'
 import Header from '../components/Header'
 import Posts from '../components/Posts'
 import Trending from '../components/Trending'
