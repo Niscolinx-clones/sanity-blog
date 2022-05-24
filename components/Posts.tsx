@@ -9,7 +9,7 @@ export default function Posts({ posts }: PostProps) {
     <div className="">
       {posts.map((post) => {
         return (
-          <div className="grid grid-cols-2 justify-between">
+          <div className="mb-10 grid justify-between lg:grid-cols-[1fr,20rem]">
             <div className="">
               <Link href={`/post/${post.slug.current}`}>
                 <div className="contents cursor-pointer">
@@ -35,12 +35,14 @@ export default function Posts({ posts }: PostProps) {
                 <span className="rounded-full bg-gray-100 p-2 ">
                   {post.category[0].title}
                 </span>
+                <div className="cursor-pointer ml-auto">
+
+                <BookMarkSvg />
+                </div>
               </div>
             </div>
             <div className="flex items-baseline">
-              <div className="flex">
-              <BookMarkSvg/>
-              </div>
+            
               <img
                 src={urlFor(post.mainImage).url()}
                 alt=""
