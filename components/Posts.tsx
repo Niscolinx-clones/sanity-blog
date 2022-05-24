@@ -62,7 +62,7 @@ export default function Posts({ posts }: PostProps) {
                   {post.category[0].title}
                 </span>
                 <span>
-                  <PortableText value={post.body[0] ? post.body[0] : post.body[1]} components={myPortableTextComponents}/>
+                  <PortableText value={post.body[0].children[0].text !== "" ? post.body[0] : post.body[1]} components={myPortableTextComponents}/>
                 </span>
                 <div className="cursor-pointer ml-auto">
 
