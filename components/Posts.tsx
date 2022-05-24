@@ -9,7 +9,7 @@ export default function Posts({ posts }: PostProps) {
     <div className="">
       {posts.map((post) => {
         return (
-          <div className="flex gap-1">
+          <div className="flex justify-between">
             <div className="grid gap-1">
               <Link href={`/post/${post.slug.current}`}>
                 <div className="contents cursor-pointer">
@@ -32,13 +32,21 @@ export default function Posts({ posts }: PostProps) {
                   })}
                 </p>
                 &#1793; <span>{post.readTime} min read ܁</span>{' '}
-                <span className="rounded-full bg-gray-100 p-2">
+                <span className="rounded-full bg-gray-100 p-2 ">
                   {post.category[0].title}
                 </span>
-                <BookMarkSvg />
               </div>
             </div>
-            <img src={urlFor(post.mainImage).url()} alt='' className="w-[200px] h-[134px]"/>
+            <div className="flex items-baseline">
+              <div className="flex pb-5">
+              <BookMarkSvg/>
+              </div>
+              <img
+                src={urlFor(post.mainImage).url()}
+                alt=""
+                className="h-[134px] w-[200px] object-cover"
+              />
+            </div>
           </div>
         )
       })}
