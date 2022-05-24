@@ -10,6 +10,11 @@ export interface Post {
   }
   readTime: number
   description: string
+  category: [
+    {
+      title: string
+    }
+  ]
   mainImage: {
     asset: {
       _ref: string
