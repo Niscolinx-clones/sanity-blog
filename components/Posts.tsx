@@ -23,16 +23,17 @@ export default function Posts({ posts }: PostProps) {
                 <p className="text-lg font-bold">{post.title}</p>
               </div>
             </Link>
-            <div className="flex">
-              <p className="text-[#757575]">
+            <div className="flex items-center text-[#757575]">
+              <p>
                 {new Date(post.publishedAt).toLocaleString('en-US', {
                   day: '2-digit',
                   month: 'short',
-                })}{' '}
-                ܁ <span>{post.readTime}</span> min read ܁ <span className='rounded-full bg-gray-100 p-2'>
-                  {post.category[0].title}
-                </span>
+                })}
               </p>
+              &#1793; <span>{post.readTime} min read ܁</span>{' '}
+              <span className="rounded-full bg-gray-100 p-2">
+                {post.category[0].title}
+              </span>
               <BookMarkSvg />
             </div>
           </div>
