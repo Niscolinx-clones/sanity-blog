@@ -8,8 +8,8 @@ import { PortableText } from '@portabletext/react'
 export default function Posts({ posts }: PostProps) {
   const myPortableTextComponents = {
     types: {
-      image: ({ value }) => <img src={urlFor(value).url()} />,
-      callToAction: ({ value, isInline }) =>
+      image: ({ value }:any) => <img src={urlFor(value).url()} />,
+      callToAction: ({ value, isInline }:any) =>
         isInline ? (
           <a href={value.url}>{value.text}</a>
         ) : (
@@ -18,7 +18,7 @@ export default function Posts({ posts }: PostProps) {
     },
 
     marks: {
-      link: ({ children, value }) => {
+      link: ({ children, value }:any) => {
         const rel = !value.href.startsWith('/')
           ? 'noreferrer noopener'
           : undefined
