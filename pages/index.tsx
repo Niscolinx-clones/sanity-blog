@@ -21,7 +21,7 @@ export const getServerSideProps = async () => {
     description,
     mainImage,
     slug,
-    body
+    body,
     category[] -> {
       title
     }
