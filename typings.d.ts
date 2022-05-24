@@ -23,7 +23,7 @@ export interface Post {
   slug: {
     current: string
   }
-  body: [object]
+  body: TypedObject[]
 }
 
 export interface PostProps {

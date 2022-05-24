@@ -6,7 +6,33 @@ import { PortableText } from '@portabletext/react'
 
 
 export default function Posts({ posts }: PostProps) {
-  console.log({ posts })
+  const myPortableTextComponents = {
+    types: {
+      image: ({ value }) => {
+        console.log({value})
+        return <img src='' alt=''/>
+      },
+      callToAction: ({ value, isInline }) =>
+        isInline ? (
+          <a href={value.url}>{value.text}</a>
+        ) : (
+          <div className="callToAction">{value.text}</div>
+        ),
+    },
+
+    marks: {
+      link: ({ children, value }) => {
+        const rel = !value.href.startsWith('/')
+          ? 'noreferrer noopener'
+          : undefined
+        return (
+          <a href={value.href} rel={rel}>
+            {children}
+          </a>
+        )
+      },
+    },
+  }
   return (
     <div className="">
       {posts.map((post) => {
@@ -36,6 +62,9 @@ export default function Posts({ posts }: PostProps) {
                 &#1793; <span>{post.readTime} min read ܁</span>{' '}
                 <span className="rounded-full bg-gray-100 p-2 ">
                   {post.category[0].title}
+                </span>
+                <span>
+                  <PortableText value={post.body} components={myPortableTextComponents}/>
                 </span>
                 <div className="cursor-pointer ml-auto">
 
