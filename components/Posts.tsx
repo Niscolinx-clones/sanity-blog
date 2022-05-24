@@ -7,6 +7,7 @@ import { PortableText } from '@portabletext/react'
 
 export default function Posts({ posts }: PostProps) {
   console.log('posts', posts)
+  const randomTextFromPost = Math.floor(Math.random() * 5) + 1
   const myPortableTextComponents = {
     types: {
       image: ({ value }:any) => <img src={urlFor(value).url()} />,
@@ -62,7 +63,7 @@ export default function Posts({ posts }: PostProps) {
                   {post.category[0].title}
                 </span>
                 <span>
-                  <PortableText value={post.body[0].children[0].text !== "" ? post.body[0] : post.body[1]} components={myPortableTextComponents}/>
+                  <PortableText value={post.body[0].children[0].text !== "" ? post.body[0] : post.body[randomTextFromPost]} components={myPortableTextComponents}/>
                 </span>
                 <div className="cursor-pointer ml-auto">
 
