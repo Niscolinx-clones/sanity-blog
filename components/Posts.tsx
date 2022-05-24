@@ -10,7 +10,7 @@ export default function Posts({ posts }: PostProps) {
       {posts.map((post) => {
         return (
           <div className="flex justify-between">
-            <div className="grid gap-1">
+            <div className="">
               <Link href={`/post/${post.slug.current}`}>
                 <div className="contents cursor-pointer">
                   <div className="flex gap-2">
@@ -38,7 +38,7 @@ export default function Posts({ posts }: PostProps) {
               </div>
             </div>
             <div className="flex items-baseline">
-              <div className="flex pb-5">
+              <div className="flex">
               <BookMarkSvg/>
               </div>
               <img
