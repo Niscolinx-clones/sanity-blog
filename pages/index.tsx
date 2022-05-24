@@ -21,6 +21,7 @@ export const getServerSideProps = async () => {
     description,
     mainImage,
     slug,
+    body
     category[] -> {
       title
     }
@@ -38,10 +39,7 @@ export const getServerSideProps = async () => {
       },
     description,
     mainImage,
-    slug,
-     category[] -> {
-      title
-    }
+    slug
   }`
 
   const category_query = `*[_type == 'category']{

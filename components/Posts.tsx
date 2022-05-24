@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { urlFor } from '../sanity'
 import { PostProps } from '../typings'
 import BookMarkSvg from '../assets/svgs/bookmark.svg'
+import { PortableText } from '@portabletext/react'
+
 
 export default function Posts({ posts }: PostProps) {
   console.log({ posts })
