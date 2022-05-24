@@ -5,7 +5,6 @@ import BookMarkSvg from '../assets/svgs/bookmark.svg'
 import { PortableText } from '@portabletext/react'
 
 export default function Posts({ posts }: PostProps) {
-  console.log('posts', posts)
   const randomTextFromPost = (max:number) => {
    return Math.floor(Math.random() * max) + 1
   }
@@ -50,6 +49,14 @@ export default function Posts({ posts }: PostProps) {
                     <h3 className="text-sm font-medium">{post.author.name}</h3>
                   </div>
                   <p className="text-lg font-bold">{post.title}</p>
+                  <PortableText
+                    value={
+                      post.body[0].children[0].text !== ''
+                        ? post.body[0]
+                        : post.body[randomTextFromPost(i)]
+                    }
+                    components={myPortableTextComponents}
+                  />
                 </div>
               </Link>
               <div className="flex items-center text-[#757575]">
@@ -62,16 +69,6 @@ export default function Posts({ posts }: PostProps) {
                 &#1793; <span>{post.readTime} min read ܁</span>{' '}
                 <span className="rounded-full bg-gray-100 p-2 ">
                   {post.category[0].title}
-                </span>
-                <span>
-                  <PortableText
-                    value={
-                      post.body[0].children[0].text !== ''
-                        ? post.body[0]
-                        : post.body[randomTextFromPost(i)]
-                    }
-                    components={myPortableTextComponents}
-                  />
                 </span>
                 <div className="ml-auto cursor-pointer">
                   <BookMarkSvg />
