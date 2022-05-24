@@ -6,8 +6,8 @@ import { PortableText } from '@portabletext/react'
 
 export default function Posts({ posts }: PostProps) {
   console.log('posts', posts)
-  const randomTextFromPost = () => {
-    Math.floor(Math.random() * 5) + 1
+  const randomTextFromPost = (max:number) => {
+   return Math.floor(Math.random() * max) + 1
   }
   const myPortableTextComponents = {
     types: {
@@ -67,8 +67,8 @@ export default function Posts({ posts }: PostProps) {
                   <PortableText
                     value={
                       post.body[0].children[0].text !== ''
-                        ? post.body[i]
-                        : post.body[randomTextFromPost]
+                        ? post.body[0]
+                        : post.body[randomTextFromPost(i)]
                     }
                     components={myPortableTextComponents}
                   />
