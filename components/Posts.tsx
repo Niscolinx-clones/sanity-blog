@@ -4,14 +4,15 @@ import { PostProps } from '../typings'
 import BookMarkSvg from '../assets/svgs/bookmark.svg'
 import { PortableText } from '@portabletext/react'
 
-
 export default function Posts({ posts }: PostProps) {
   console.log('posts', posts)
-  const randomTextFromPost = Math.floor(Math.random() * 5) + 1
+  const randomTextFromPost = () => {
+    Math.floor(Math.random() * 5) + 1
+  }
   const myPortableTextComponents = {
     types: {
-      image: ({ value }:any) => <img src={urlFor(value).url()} />,
-      callToAction: ({ value, isInline }:any) =>
+      image: ({ value }: any) => <img src={urlFor(value).url()} />,
+      callToAction: ({ value, isInline }: any) =>
         isInline ? (
           <a href={value.url}>{value.text}</a>
         ) : (
@@ -20,7 +21,7 @@ export default function Posts({ posts }: PostProps) {
     },
 
     marks: {
-      link: ({ children, value }:any) => {
+      link: ({ children, value }: any) => {
         const rel = !value.href.startsWith('/')
           ? 'noreferrer noopener'
           : undefined
@@ -34,7 +35,7 @@ export default function Posts({ posts }: PostProps) {
   }
   return (
     <div className="">
-      {posts.map((post) => {
+      {posts.map((post, i) => {
         return (
           <div className="mb-10 grid justify-between lg:grid-cols-[1fr,20rem]">
             <div className="">
@@ -63,16 +64,21 @@ export default function Posts({ posts }: PostProps) {
                   {post.category[0].title}
                 </span>
                 <span>
-                  <PortableText value={post.body[0].children[0].text !== "" ? post.body[0] : post.body[randomTextFromPost]} components={myPortableTextComponents}/>
+                  <PortableText
+                    value={
+                      post.body[0].children[0].text !== ''
+                        ? post.body[i]
+                        : post.body[randomTextFromPost]
+                    }
+                    components={myPortableTextComponents}
+                  />
                 </span>
-                <div className="cursor-pointer ml-auto">
-
-                <BookMarkSvg />
+                <div className="ml-auto cursor-pointer">
+                  <BookMarkSvg />
                 </div>
               </div>
             </div>
             <div className="flex items-baseline">
-            
               <img
                 src={urlFor(post.mainImage).url()}
                 alt=""
