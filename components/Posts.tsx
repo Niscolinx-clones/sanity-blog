@@ -6,6 +6,7 @@ import { PortableText } from '@portabletext/react'
 
 
 export default function Posts({ posts }: PostProps) {
+  console.log({posts})
   const myPortableTextComponents = {
     types: {
       image: ({ value }:any) => <img src={urlFor(value).url()} />,
