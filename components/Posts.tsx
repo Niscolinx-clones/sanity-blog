@@ -38,7 +38,7 @@ export default function Posts({ posts }: PostProps) {
                 <BookMarkSvg />
               </div>
             </div>
-            <img src={urlFor(post.mainImage).url()} alt='' width={20}  height={20}/>
+            <img src={urlFor(post.mainImage).url()} alt='' className="w-[200px] h-[134px]"/>
           </div>
         )
       })}
