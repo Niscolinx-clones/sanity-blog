@@ -29,7 +29,7 @@ export default function Posts({ posts }: PostProps) {
                   day: '2-digit',
                   month: 'short',
                 })}{' '}
-                ܁ <span>{post.readTime}</span> min read ܁ <span className='rounded-lg bg-gray-200 p-2'>
+                ܁ <span>{post.readTime}</span> min read ܁ <span className='rounded-full bg-gray-100 p-2'>
                   {post.category[0].title}
                 </span>
               </p>
