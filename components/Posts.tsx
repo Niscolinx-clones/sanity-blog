@@ -23,7 +23,7 @@ export default function Posts({ posts }: PostProps) {
           ? 'noreferrer noopener'
           : undefined
         return (
-          <a href={value.href} rel={rel} className='bg-blue-600'>
+          <a href={value.href} rel={rel}>
             {children}
           </a>
         )
