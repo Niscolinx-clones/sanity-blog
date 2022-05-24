@@ -9,7 +9,7 @@ export default function Posts({ posts }: PostProps) {
     <div className="">
       {posts.map((post) => {
         return (
-          <div className="flex justify-between">
+          <div className="grid grid-cols-2 justify-between">
             <div className="">
               <Link href={`/post/${post.slug.current}`}>
                 <div className="contents cursor-pointer">
