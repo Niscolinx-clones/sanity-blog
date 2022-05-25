@@ -5,9 +5,13 @@ import BookMarkSvg from '../assets/svgs/bookmark.svg'
 import { PortableText } from '@portabletext/react'
 
 export default function Posts({ posts }: PostProps) {
+
+  
   const randomTextFromPost = (max:number) => {
    return Math.floor(Math.random() * max) + 1
   }
+
+  //Style the texts 
   const myPortableTextComponents = {
     types: {
       image: ({ value }: any) => <img src={urlFor(value).url()} />,
