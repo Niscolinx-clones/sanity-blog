@@ -8,7 +8,6 @@ export default function Posts({ posts }: PostProps) {
 
   
   const randomTextFromPost = (max:number) => {
-    console.log({max})
    return Math.floor(Math.random() * max) + 1
   }
 
